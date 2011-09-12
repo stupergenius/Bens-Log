@@ -21,7 +21,8 @@ def main():
     if (args.date and args.date != now_date_keyword and args.date != mtime_date_keyword):
         tmpl_date = strip(args.date)
     elif (args.date == None or args.date == now_date_keyword):
-        tmpl_date = datetime.now().replace(microsecond=0).isoformat()
+        # should look like 2011-09-08 02:08
+        tmpl_date = datetime.now().replace(microsecond=0).strftime('%Y-%m-%d %H:%M')
     
     tmpl_author = None
     if (args.author and args.author != current_user_keyword):
