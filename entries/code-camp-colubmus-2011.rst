@@ -5,13 +5,14 @@ Code Camp Columbus 2011
 :tags: code, Open Source
 
 Last weekend I had the opportunity to attend `Code Camp Columbus`_ for the first time. This is the second year that the event has been held, and it was pretty great this year. As a busy, working developer, I greatly appreciate their core principles:
+
 * by and for the developer community
 * always free
 * community-developed material
 * no fluff - only code
 * never occurs during working hours
 
-The venue was `Tech Colubmus`_, which is quite a nice place. The main presentation room was large with a very large screen. There were two additional rooms, one of which was probably a little too small for the group, but it made the talks more interactive in that space. Breakfast, drinks, snacks, and lunch were all generously provided by the event `sponsors`_, as were the many many raffle prizes. I went away with a neat beginners Scala book (which I'm currently working through) and a $25 Best Buy gift card. All in all, quite worth the cost of attendance, which was **free**.
+The venue was `Tech Colubmus`_, which is quite a nice place. The main presentation room was large with a very large screen. There were two additional rooms, one of which was probably a little too small for the group, but it made the talks more interactive in that space. Breakfast, drinks, snacks, and lunch were all generously provided by the event `sponsors`_, as were the many many raffle prizes. I went away with a neat `Beginning Scala`_ book (which I'm currently working through) and a $25 Best Buy gift card. All in all, quite worth the cost of attendance, which was **free**.
 
 Overall the talks were great, and I highly recommend going to this conference the next time it is presented. I greatly enjoyed the *Perl*, *Behavior Driven Development*, and the *Verilog* talks. I'll outline a few of the talks below.
 
@@ -30,7 +31,7 @@ Unlock the Power of Arduino with Libraries
 ==========================================
 
 This talk was a more specific Arduino talk than the others I have previously attended at other conferences. It assumed at least a basic understanding of Arduino, which I thought was quite helpful. Most people interested in Arduino already know a significant amount about the platform, but just don't have the time to devote to actually doing anything with it. This talk introduced more advanced topics that I hadn't previously known. An interesting quote from the presentation speaks to the paradigm shift when switching from primarly software development to a more hardware integrated approach with Arduino:
-	Ardiuno interacts more directly with the world, as opposed to mediated through a user or another library.
+*Ardiuno interacts more directly with the world, as opposed to mediated through a user or another library.*
 
 The main topic of this particular talk is about how to use libraries in Arduino. Libraries in Arduino are more or less identical to libraries in other contexts, and the use is the same as well. Simply #including a header file adds callable code to the current program. The header files expose some public members or methods, and the including program can use them as usual. As a sort of throwback to the days when one had to be conscious of memory, including library code can easily overflow the amount of program memory available on the Arduino. Other than that, libraries are just header files that you can use to easily add additional functionaly to your Arduino programs. The community is apparently fairly active, and many libraries are available for common addon hardware, as well as libraries for controlling servos and enabling communication, and the like.
 
@@ -67,9 +68,12 @@ Code Camp Columbus was a huge success this year, in my opinion, and I look forwa
 .. _Code Camp Columbus: http://columbuscodecamp.com/
 .. _Tech Colubmus: http://www.techcolumbus.org/
 .. _sponsors: http://columbuscodecamp.com/?s=sponsors
+.. _PhoneGap: http://phonegap.com/
 .. _Heavens Above: http://www.heavens-above.com/?lat=0&lng=0&loc=Unspecified&alt=0&tz=CET
 .. _Danger Shield: http://www.sparkfun.com/products/10570
 .. _Mechanize: http://search.cpan.org/dist/WWW-Mechanize/
 .. _BerliOS: http://www.berlios.de/
 .. _Verilog: http://en.wikipedia.org/wiki/Verilog
+.. _FPGA: http://en.wikipedia.org/wiki/Field-programmable_gate_array
 .. _VHDL: http://en.wikipedia.org/wiki/VHDL
+.. _Beginning Scala: http://www.apress.com/9781430219897
