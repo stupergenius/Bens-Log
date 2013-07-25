@@ -10,3 +10,7 @@ Sourdough and kimchi coming along nicely. Kimchee starting to taste good. Have b
 Morning Ride
 ------------
 Ride was rather cool this morning. Always feel bad when passing other cyclists on a bike. I don't know why. Rode in way too high a gear up the Broad St hill from the river. Otherwise uneventful.
+
+Evening
+-------
+Met with pastor that is going to marry us. Rode home from Bexley, shoulder started hurting about 5 miles into the ride. Skipped dinner, had some granola before gym and at midnight. Brother dropped off some bottles and I gave him new beers. Gym productive, increasing bench press weight after stalling. Standing shoulder presses are surprisingly more difficult than seated.
