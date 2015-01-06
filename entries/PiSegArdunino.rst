@@ -4,10 +4,11 @@ PiSeg Arduino Project
 :category: Arduino
 :tags: arduino, hardware, technology
 
+`View the sketch`_ for this project itself, along with the Fritzing file, in my GitHub repository.
 
 This simple sketch displays the first 8 thousand or so digits of PI on a `7 segment LED`_ from Radioshack.
 The LED display is done nicely with a byte encoded segment value, where each bit turns a segment on or off.
-Below is a `labeled diagram` of the segments themselves:
+Below is a `labeled diagram`_ of the segments themselves:
 
 .. image:: http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/150px-7_segment_display_labeled.svg.png
 
@@ -41,5 +42,6 @@ Below is a Fritzing diagram of the prototype (might have obsessed a little on th
 
 .. image:: http://media.bensnider.com/images/sketches/PiSeg.jpg
 
+.. _View the sketch: https://github.com/stupergenius/Arduino-Sandbox/tree/master/PiSeg
 .. _7 segment LED: http://www.radioshack.com/product/index.jsp?productId=2062557
-.. `labeled diagram`: http://en.wikipedia.org/wiki/File:7_segment_display_labeled.svg
+.. _`labeled diagram`: http://en.wikipedia.org/wiki/File:7_segment_display_labeled.svg
