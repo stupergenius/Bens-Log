@@ -14,7 +14,7 @@ def main():
     parser.add_argument('--date', help='Supply a date to override the current date. If nothing or "' + now_date_keyword +'" is passed we will use the current date. If "' + mtime_date_keyword + '" is passed we will not generate a date and Pelican will use the file\'s mtime for the post\'s date.')
     parser.add_argument('--author', help='Passing "' + current_user_keyword + '" to this option will try to get the currently logged in user.')
     parser.add_argument('--category')
-    parser.add_argument('--tags')
+    parser.add_argument('--tags', help='Comma delimited list of tags.')
     args = parser.parse_args()
     
     tmpl_date = None

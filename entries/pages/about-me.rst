@@ -2,10 +2,6 @@ About Me
 ########
 :date: 2008-02-25 16:19
 
-I am a computer scientist and am currently employed by `Chepri Interactive`_
-in Columbus, Ohio. My interests include software engineering,
-iOS, Android, video games, gadgetry, Linux, and harshing on Microsoft.
+I'm an iOS developer by trade, and otherwise identify as a husband, cyclist, vegan and nerd. Technology is my life, and mobile technology is where I choose direct my focus. Mobile technology is how the world interacts, and so being at the forefront of this trend is equal parts challenging and rewarding.
 
-GNU for life!
-
-.. _Chepri Interactive: http://www.chepri.com
+I'm not currently looking for work, but I always welcome connections.
