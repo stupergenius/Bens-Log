@@ -22,7 +22,7 @@ fired up my shiny new Flash CS4 and gave it a try. And indeed, my
 suspicion was correct. The following simple code below validates my
 hypothesis.
 
-::
+.. code:: actionscript
 
     var test:Vector.<Sprite> = new Vector.<Sprite>();
     test.push(new Sprite(), new MovieClip());

@@ -10,7 +10,7 @@ with similar names like TVs->Color and Movies->Color, we can't find by
 the category name since its not unique, but we can search by pathing
 like tvs/color or movies/color. So to this end is this model code:
 
-::
+.. code:: php
 
     function findPath($paths, $fieldName) {
         $root = $this->find('threaded');
@@ -39,7 +39,7 @@ like tvs/color or movies/color. So to this end is this model code:
 
 And we can use it from our controller like:
 
-::
+.. code:: php
 
     $category = $this->Category->findPath(array('tv', 'color'), 'name');
 

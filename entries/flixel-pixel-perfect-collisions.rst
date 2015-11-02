@@ -51,7 +51,7 @@ to call every frame, which would be wasteful in any case. Below is the
 PPlxSprite class which override the collision methods to provide pixel
 perfect collisions.
 
-::
+.. code:: actionscript
 
     import flash.display.BitmapData;
     import flash.geom.Point;
@@ -128,7 +128,7 @@ when it detects that while a bounding box collision may have occurred,
 the pixels in either sprite have not collided. A short usage class
 follows.
 
-::
+.. code:: actionscript
 
     public class SomeSprite extends PPlxSprite {
 

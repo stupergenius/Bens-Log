@@ -1,11 +1,24 @@
 ﻿# -*- coding: utf-8 -*-
 AUTHOR = u'Ben Snider'
 SITENAME = u"Ben's Open Source Swift Log"
-SITEURL = 'http://bensnider.com'
+SITETITLE = SITENAME
+SITESUBTITLE = 'iOS Developer - Ponderer'
+# SITEURL = '//localhost:8000'
+SITEURL = 'http://www.bensnider.com'
+SITELOGO = '//www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=140'
+
+ROBOTS = 'index, follow'
+COPYRIGHT_YEAR = 2015
+CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0', 'slug': 'by-sa' }
+
+MAIN_MENU = True
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags/'))
 
 PATH = 'entries'
-THEME = '../pelican-themes/blue-penguin'
-GITHUB_URL = 'http://github.com/stupergenius'
+THEME = '../pelican-themes/Flex'
+GITHUB_URL = 'https://github.com/stupergenius'
 DISQUS_SITENAME = "benslog"
 PDF_GENERATOR = False
 REVERSE_CATEGORY_ORDER = False
@@ -44,9 +57,10 @@ PAGINATION_PATTERNS = (
 )
 
 SOCIAL = (
-    ('twitter', 'https://twitter.com/benatbensnider'),
-    ('coderwall', 'https://coderwall.com/bensnider'),
     ('github', 'https://github.com/stupergenius'),
+    ('twitter', 'https://twitter.com/benatbensnider'),
+    ('linkedin', 'https://www.linkedin.com/in/bensnider'),
+    ('rss', '//www.bensnider.com/feeds/all.atom.xml'),
 )
 
 # A list of files to copy from the source to the destination

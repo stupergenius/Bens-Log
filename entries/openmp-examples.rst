@@ -26,7 +26,7 @@ is useful, for example, if the current layer 200 neurons, then the
 overhead associated with creating more threads might actually degrade
 performance.
 
-::
+.. code:: cpp
 
     int j(0); double neuronValue(0);
     #pragma omp parallel for private(j, neuronValue) if(layer.numNeurons > 500)
@@ -40,14 +40,14 @@ performance.
 Likewise we can use these two declarations independently as in the
 following two examples with expected results.
 
-::
+.. code:: cpp
 
     #pragma parallel for if(x > 100)
     for (int i=0; i<1000; ++i) {
         // something
     }
 
-::
+.. code:: cpp
 
     int j(0);
     #pragma parallel for private(j)

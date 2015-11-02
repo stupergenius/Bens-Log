@@ -19,7 +19,7 @@ other times I will need to get the whole shebang. It's pretty handy in
 general. So my version follows (as a bonus I include my handy-dandy
 clearAllChildren function):
 
-::
+.. code:: actionscript
 
     package com.bmm.utils {
       import flash.display.DisplayObject;

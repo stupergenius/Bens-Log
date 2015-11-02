@@ -8,7 +8,7 @@ So, gonna write this here because I will forget how to do it.
 Essentially, this approach eliminates the need to conditionally branch
 on menu item properties. Before we would do something like:
 
-::
+.. code:: actionscript
 
     private function menuHandler(event:MouseEvent):void {
         if (event.item.@label == 'Save') {
@@ -37,7 +37,7 @@ definition rather than a Class, and using the `Function.call()`_ method
 to actually call the returned Function. So our revised menu item XML
 would look something like:
 
-::
+.. code:: xml
 
     <!-- menu items -->
     <mx:XMLList>
@@ -47,7 +47,7 @@ would look something like:
 
 And our handler would look like:
 
-::
+.. code:: actionscript
 
     // AS handler
     private function menuHandler(event:MouseEvent):void {

@@ -8,7 +8,7 @@ In a reversal of yesterday's post is today's, getting a path to a node,
 or nodes. Basically we just use the core getpath() function of the Tree
 behavior and traverse that path.
 
-::
+.. code:: php
 
     function setTreePath(&$data, $path='tree_path', $label='name') {
         if (!is_array($data) || !in_array('Tree', $this->actsAs)) {
@@ -34,7 +34,7 @@ behavior and traverse that path.
 
 And we can use it simply like in the following test:
 
-::
+.. code:: php
 
     function testSetTreePath() {
         $result = $this->Category->findById(3);

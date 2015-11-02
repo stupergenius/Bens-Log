@@ -8,7 +8,7 @@ Recently ran into an issue where I thought I should have been drawing a
 transparent BitmapData object, but the resulting object had a white
 background. The original incorrect code was the following:
 
-::
+.. code:: actionscript
 
     var bd:BitmapData = new BitmapData(w, h, true);
 
@@ -19,7 +19,7 @@ white background instead of being transparent. To remedy this, the
 solution is to pass along to the function a 32bit color value where the
 alpha value is zero. The following code illustrates this solution:
 
-::
+.. code:: actionscript
 
     var bd:BitmapData = new BitmapData(w, h, true, 0x00000000);
 
@@ -28,7 +28,7 @@ can draw whatever you desire. In practice I use this to determine the
 alpha values of a given pixel in a given display object. The following
 function implements this technique:
 
-::
+.. code:: actionscript
 
     public static function getAlphaAt(d:DisplayObject, x:Number, y:Number):Number {
         // Even though we set transparent to true, we still need to use a transparent color.

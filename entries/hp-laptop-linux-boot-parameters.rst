@@ -12,7 +12,7 @@ Buy about a year ago and I am currently running Ubuntu 8.10 with the
 2.27 kernel. The "magic" boot parameter seems to be pnpbios=off, so I
 end up with a grub entry something like:
 
-::
+.. code:: bash
 
     root (hd0,0)
     kernel /vmlinuz root=UUID=<some giant UUID> ro quiet splash pnpbios=off

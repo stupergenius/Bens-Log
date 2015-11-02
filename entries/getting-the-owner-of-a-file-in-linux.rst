@@ -10,7 +10,7 @@ Basically it just uses the standard "stat" program and uses the print
 formatting option to only output the name of the owner. Here I use bash
 to get the owner:
 
-::
+.. code:: bash
 
     #!/bin/bash
     username=`stat ${1} --printf %U`
@@ -19,14 +19,14 @@ to get the owner:
 
 And a sample run looks like:
 
-::
+.. code:: bash
 
     $ ./whoOwnsIt.sh testfile.txt
     The owner of testfile.txt is ben.
 
 Making root run it as the user's owner is then trivially done with:
 
-::
+.. code:: bash
 
     su ${username} ${cmd}
 

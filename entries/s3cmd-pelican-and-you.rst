@@ -8,7 +8,7 @@ Turns out uploading this blog to `Amazon S3`_ using s3cmd_ is ridiculously
 simple. All I have to do to sync the Pelican generated directory to my S3 bucket
 is the follwing:
 
-.. code-block:: bash
+.. code:: bash
 
     s3cmd sync --acl-public --delete-removed output/ s3://www.bensnider.com/
 

@@ -12,7 +12,7 @@ Today I stumbled over the `NSZombieEnabled argument`_ and HOLY CRAP WHY
 ISN'T THIS DEFAULT BEHAVIOR. After enabling the argument I found where
 my app crashed in about 1 minute. Turns out you **should not** do:
 
-::
+.. code:: objc
 
     - (void)viewDidUnload {
         self.foo = nil;
@@ -21,7 +21,7 @@ my app crashed in about 1 minute. Turns out you **should not** do:
 
 but rather
 
-::
+.. code:: objc
 
     - (void)viewDidUnload {
         foo = nil;

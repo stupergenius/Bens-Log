@@ -8,7 +8,7 @@ Made a helper to output lightbox compatible links, since the core HTML
 helper was not working. Stick the following code in
 app/view/helpers/lightbox.php:
 
-::
+.. code:: php
 
     class LightboxHelper extends AppHelper {
 
@@ -29,7 +29,7 @@ app/view/helpers/lightbox.php:
 Then you can use it from your views, after including it in your
 controller's $helpers array, like the following:
 
-::
+.. code:: php
 
     echo $lightbox->img('somethumb.jpg', 'somefullimage.jpg');
 

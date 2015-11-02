@@ -17,7 +17,7 @@ The only constraints here are that the resulting tiles must be square,
 and that they don't exceed the width limit for Flash `BitmapData`_
 objects. So here we simply are cropping the image into square tiles.
 
-::
+.. code:: bash
 
     convert full.png -crop 32x32 tiles.png
 
@@ -33,7 +33,7 @@ globbed format will result in tiles that should be at the end of the
 image randomly at the beginning (try it before this step by noting the
 output of \`ls tiles\*.png\`).
 
-::
+.. code:: bash
 
     files=$(ls tiles*.png | sort -t '-' -n -k 2 | tr '\n' ' ')
     montage $files -tile x1 -geometry 32x32+0+0 sheet.png

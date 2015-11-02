@@ -18,7 +18,7 @@ direction they are traveling. Here I will cover how I solved speeding up
 and slowing down the player when he crosses over such an obstacle. Below
 is a skeleton of my main player class:
 
-::
+.. code:: actionscript
 
      package sprites {
         import org.flixel.FlxG;
@@ -71,7 +71,7 @@ an oil slick. We also need sprites that define how they should change
 the player movement when they are stepped over. Below is a skeleton of
 one of my obstacle classes:
 
-::
+.. code:: actionscript
 
     package sprites.obstacles {
         import org.flixel.FlxG;
@@ -97,7 +97,7 @@ define that this sprite, when stepped over, speeds up the player by a
 factor of 2. Below are the relevant parts of the update() method in my
 main PlayState class.
 
-::
+.. code:: actionscript
 
     this._player.velocityFactor = 1;
     for each (sprite in this._obstacles) {

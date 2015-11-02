@@ -7,7 +7,7 @@ Dynamically Import and Instantiate Python Classes
 Ran into this bit of genius code in the `python mailing list`_. Here's
 the code for now and I'll explain it later:
 
-::
+.. code:: python
 
     def forname(modname, classname):
         ''' Returns a class of "classname" from module "modname". '''
@@ -21,7 +21,7 @@ modname, or it doesn't find modname, it will simply throw an import
 error. What's left to do is just instantiate an object of that class and
 shazam, its magic. Here's an example to create a new Popen instance:
 
-::
+.. code:: python
 
     p_class = forname("subprocess", "Popen")
     p_inst = p_class(["ls", "-l"])

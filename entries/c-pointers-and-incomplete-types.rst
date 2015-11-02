@@ -8,7 +8,7 @@ Learned some new things about C++ and pointers today. Namely that you
 can declare a pointer member variable of the class A in class A. Pretty
 neat. Take for example the following simple illustration.
 
-::
+.. code:: cpp
 
     #include <iostream>
     class A {
@@ -31,7 +31,7 @@ neat. Take for example the following simple illustration.
 
 It's output is as follows:
 
-::
+.. code:: cpp
 
     a.member->x = '3'
     b.member->x = '2'

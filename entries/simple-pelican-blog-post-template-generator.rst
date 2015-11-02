@@ -8,7 +8,7 @@ I just finished a simple script that helps generate Pelican_ blog posts by
 printing out some reStructuredText, in the format Pelican expects, based on the
 given input parameters. You can use it simple as in the following listing:
 
-.. code-block:: bash
+.. code:: bash
 
    ./tools/pelican-template-generator.py "My New Post"
 
@@ -18,7 +18,7 @@ includes options for writing to an output file, attempting to get the current
 author's name from the environment, generating dates, and support for categories
 and tags. The command I used to generate this post's template was:
 
-.. code-block:: bash
+.. code:: bash
 
    ./pelican-template-generator.py "Simple Pelican Blog Post Template Generator" --category Development --tags "python, pelican" -f simple-pelican-blog-post-template-generator.rst
 

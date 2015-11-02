@@ -12,7 +12,7 @@ array, the keys are the values sent back to the controller, and the
 values are the text displayed on the page. Building the controller to
 output a list of radio buttons looks like this:
 
-::
+.. code:: php
 
     ...
     function radioPosts() {
@@ -31,7 +31,7 @@ output a list of radio buttons looks like this:
 
 Then the view for this controller would look something like:
 
-::
+.. code:: php
 
     echo $form->create('Post', array('action'=>'radioPosts'));
     echo $form->radio('id', $options);

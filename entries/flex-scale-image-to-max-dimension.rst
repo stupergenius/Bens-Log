@@ -11,7 +11,7 @@ of the bounds, is scaled so that its largest dimension becomes equal to
 the given maximum. This function scales the image proportionally so it
 won't skew it.
 
-::
+.. code:: actionscript
 
     public function scaleImageToMaxDimension(img:Image, maxWidth:Number, maxHeight:Number):void {
         var scaleH:Number=1, scaleV:Number=1;
@@ -32,7 +32,7 @@ approach works best when you have little or no control over either. In
 application this code would be used after the image has finished
 loading. So for example I might do something like the following:
 
-::
+.. code:: actionscript
 
     import flash.events.Event;
     import mx.controls.Image;
