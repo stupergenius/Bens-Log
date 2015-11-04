@@ -1,8 +1,8 @@
 ﻿# -*- coding: utf-8 -*-
 AUTHOR = u'Ben Snider'
-SITENAME = u"Ben's Open Source Swift Log"
+SITENAME = u"Ben Snider"
 SITETITLE = SITENAME
-SITESUBTITLE = 'iOS Developer - Ponderer'
+SITESUBTITLE = 'Open Source Swift and iOS Development'
 # SITEURL = '//localhost:8000'
 SITEURL = 'http://www.bensnider.com'
 SITELOGO = '//www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=140'
