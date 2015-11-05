@@ -1,5 +1,3 @@
-#!/usr/bin/swift -F Carthage/Build/Mac/
-
-import OptionKit
+#!/usr/bin/swift
 
 print("Hello World!")
