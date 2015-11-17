@@ -15,7 +15,7 @@ let actualArguments = Array(Process.arguments[1..<Process.arguments.count])
 
 // Simple function to print the "help" message.
 func printHelp(parser: OptionParser) {
-    print(parser.helpStringForCommandName("btc.swift"))
+    print(parser.helpStringForCommandName("options.swift"))
 }
 
 do {
