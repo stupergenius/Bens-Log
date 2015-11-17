@@ -69,7 +69,28 @@ if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments
 
 As we can see, this is very similar to our previous `options.swift` script. The main differences are that we're capturing the `--interval` parameter when given, and returning it from an optional wrapped function. In this way we've encapsulated the argument parsing logic into its own unit, so we can focus on implementing our other features.
 
+First though, let's take some time to conver the `interval` option string given to us from OptionKit and convert it into an `enum` to make it a little easier to work with. We'll write some simple code here to accomplish this:
 
+```swift
+enum IntervalType: String {
+    LastIntervalType = "last",
+    HourlyIntervalType = "hourly",
+    VWAPIntervalType = "vwap",
+}
+
+// Building on the same code as before...
+if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
+    if let intervalType = IntervalType(rawValue: interval.lowercaseString) {
+        // now we have a typed interval enum we can pass on
+    } else {
+        print("Please provide one of the following interval types using the --interval option: last, hourly, vwap.")
+    }
+}
+```
+
+## URL Loading
+
+Our next main task is to load the URL corresponding to the interval type the user has chosen.
 
 
 
