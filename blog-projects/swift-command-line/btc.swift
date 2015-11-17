@@ -38,20 +38,19 @@ func intervalFromArgs(args args: Array[String]) -> String? {
     return nil
 }
 
-func intervalTypeFromInterval(interval interval: String): IntervalType? {
-    return nil
-}
-
-func priceByInterval(intervalType intervalType: IntervalType): Double? {
-    return nil
+func retrievePriceData(interval: IntervalType) -> NSData? {
+    
 }
 
 if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
     if let intervalType = IntervalType(rawValue: interval.lowercaseString) {
-        if let price = priceByInterval(intervalType) {
-            print(NSString(format: "%.2f", price))
+        if let
+            priceData = retrievePriceData(interval: intervalType),
+            price = parsePrice(data: priceData) {
+            // Success!
+            print(NSString(format: "0.2f", price))
         } else {
-            print("Unable to connect to BitStamp API.")
+            print("There was an error retrieving current price data.")
         }
     } else {
         print("Please provide one of the following interval types using the --interval option: last, hourly, vwap.")
