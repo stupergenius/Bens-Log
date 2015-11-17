@@ -14,5 +14,63 @@ As a recap from the first part, we learned how to:
 
 In this post we'll learn how to leverage all the above to make a Swift script to check BTC prices. So we'll learn how to make a URL request to fetch data from the [BitStamp API](https://www.bitstamp.net/api/), parse the JSON data it provides, and print out some meaningful information to the user. As a bonus we'll also see how we can compile our Swift script - once we're happy with it - into an exectuable binary to save some execution time.
 
+At the end, we'll have a script written that will by default print the last BTC price in USD, and will accept an optional parameter that allows us to specify the interval of the price calculation. For the optional `interval` paramter we can sepcify "last" (the default), "hourly", or "[vwap](https://en.wikipedia.org/wiki/Volume-weighted_average_price)". The generated OptionKit help message should also give us some feedback on how to call the script. We should be able to run it as follows:
+
+```bash
+./btc.swift
+335.45
+
+./btc.swift --interval hourly
+338.27
+```
+
+## Command Line Arguments
+
+To begin, let's start by defining how we'll be accepting user input. Using OptionKit, we can set this up quite easily. Using a modified version of our warmup script `options.swift`, I'll create a new file `btc.swift` with the following contents:
+
+```swift
+#!/usr/bin/swift -F Carthage/Build/Mac/
+
+import OptionKit
+
+func intervalFromArgs(args args: Array[String]) -> String? {
+    let intervalOpt = Option(trigger:.Mixed("i", "interval"), numberOfParameters: 1)
+    let helpOpt = Option(trigger:.Mixed("h", "help"))
+    let parser = OptionParser(definitions:[intervalOpt, helpOpt])
+    
+    func printHelp(parser: OptionParser) {
+        print(parser.helpStringForCommandName("btc.swift"))
+    }
+    
+    do {
+        let (options, rest) = try parser.parse(actualArguments)
+    
+        if options[helpOpt] != nil {
+            printHelp(parser)
+        } else {
+            if options[intervalOpt] != nil {
+                return rest.joinWithSeparator(" ")
+            } else {
+                return "last"
+            }
+        }
+    } catch let OptionKitError.InvalidOption(description: description) {
+        print(description)
+    }
+    
+    return nil
+}
+
+if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
+    print("\(interval)")
+}
+
+```
+
+As we can see, this is very similar to our previous `options.swift` script. The main differences are that we're capturing the `--interval` parameter when given, and returning it from an optional wrapped function. In this way we've encapsulated the argument parsing logic into its own unit, so we can focus on implementing our other features.
 
 
+
+
+
+END
