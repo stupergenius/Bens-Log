@@ -33,7 +33,7 @@ To begin, let's start by defining how we'll be accepting user input. Using Optio
 
 import OptionKit
 
-func intervalFromArgs(args args: Array[String]) -> String? {
+func intervalFromArgs(args: Array[String]) -> String? {
     let intervalOpt = Option(trigger:.Mixed("i", "interval"), numberOfParameters: 1)
     let helpOpt = Option(trigger:.Mixed("h", "help"))
     let parser = OptionParser(definitions:[intervalOpt, helpOpt])
@@ -69,7 +69,7 @@ if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments
 
 As we can see, this is very similar to our previous `options.swift` script. The main differences are that we're capturing the `--interval` parameter when given, and returning it from an optional wrapped function. In this way we've encapsulated the argument parsing logic into its own unit, so we can focus on implementing our other features.
 
-First though, let's take some time to conver the `interval` option string given to us from OptionKit and convert it into an `enum` to make it a little easier to work with. We'll write some simple code here to accomplish this:
+First though, let's take some time to convert the `interval` option string given to us from OptionKit and convert it into a Swift `enum` to make it a little easier to work with. We'll write some simple code here to accomplish this:
 
 ```swift
 enum IntervalType: String {
@@ -90,8 +90,29 @@ if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments
 
 ## URL Loading
 
-Our next main task is to load the URL corresponding to the interval type the user has chosen.
+Now that we're finished parsing arguments, our next main task is to load the URL corresponding to the interval type the user has chosen. Using BitStamp, this is actually just two URLs with the same JSON response format. We'll wire up a little function that determines the correct URL and kicks off a network request using the handy `NSURLSession` class from the `Foundation` framework.
 
+```swift
 
+func retrievePriceData(interval: IntervalType) -> NSData? {
+    return nil
+}
+
+// Building on the same code as before...
+if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
+    if let intervalType = IntervalType(rawValue: interval.lowercaseString) {
+        if let
+            priceData = retrievePriceData(interval: intervalType),
+            price = parsePrice(data: priceData) {
+            // Success!
+            print(NSString(format: "0.2f", price))
+        } else {
+            print("There was an error retrieving current price data.")
+        }
+    } else {
+        print("Please provide one of the following interval types using the --interval option: last, hourly, vwap.")
+    }
+}
+```
 
 END
