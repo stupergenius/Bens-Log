@@ -47,7 +47,7 @@ func priceByInterval(intervalType intervalType: IntervalType): Double? {
 }
 
 if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
-    if let intervalType = intervalTypeFromInterval(interval) {
+    if let intervalType = IntervalType(rawValue: interval) {
         if let price = priceByInterval(intervalType) {
             print(NSString(format: "%.2f", price))
         } else {
