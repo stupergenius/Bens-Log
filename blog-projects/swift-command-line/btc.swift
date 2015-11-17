@@ -10,7 +10,7 @@ enum IntervalType: String {
 }
 
 func intervalFromArgs(args args: Array[String]) -> String? {
-    let intervalOpt = Option(trigger:.Mixed("s", "say"))
+    let intervalOpt = Option(trigger:.Mixed("i", "interval"))
     let helpOpt = Option(trigger:.Mixed("h", "help"))
     let parser = OptionParser(definitions:[intervalOpt, helpOpt])
     
