@@ -7,6 +7,7 @@ SITESUBTITLE = 'Open Source Swift and iOS Development'
 SITEURL = '//www.bensnider.com'
 SITELOGO = '//www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=140'
 
+GOOGLE_ANALYTICS = 'UA-70428973-1'
 ROBOTS = 'index, follow'
 COPYRIGHT_YEAR = 2015
 CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0', 'slug': 'by-sa' }
