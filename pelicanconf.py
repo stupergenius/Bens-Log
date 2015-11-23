@@ -4,7 +4,7 @@ SITENAME = u"Ben Snider"
 SITETITLE = SITENAME
 SITESUBTITLE = 'Open Source Swift and iOS Development'
 # SITEURL = '//localhost:8000'
-SITEURL = '//www.bensnider.com'
+SITEURL = 'http://www.bensnider.com'
 SITELOGO = '//www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=140'
 
 GOOGLE_ANALYTICS = 'UA-70428973-1'
