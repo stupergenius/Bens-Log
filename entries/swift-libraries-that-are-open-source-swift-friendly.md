@@ -1,4 +1,4 @@
-Title: Swift Libraries That Are Open Source Ready
+Title: Swift Libraries That Are Open Source Swift Friendly
 Date: 2015-12-02 18:08
 Author: Ben Snider
 Category: Open Source Swift
