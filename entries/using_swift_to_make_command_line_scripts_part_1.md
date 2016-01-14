@@ -35,7 +35,7 @@ In order to get some nice command line argument parsing utilies, and also to dem
 mkdir swift_btc_script
 cd swift_btc_script
 echo 'github "nomothetis/OptionKit" ~> 1.0' > Cartfile
-cartage update
+carthage update
 ```
 
 At this point, Carthage will clone OptionKit and build it as a framework under the `Carthage/Build/Mac` folder in our `swift_btc_script` folder.
