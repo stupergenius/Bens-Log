@@ -33,8 +33,6 @@ Given what we know now, we see we'll need a web service that waits for requests 
 
 Let's see. Where to begin. First I'd say make sure you having a working Swift 2.2 environment so we can use the package manager. Follow the excellent instructions on [Swift.org](https://swift.org/download/#apple-platforms) to get up and running.
 
-*Note*: Thanks to the comment by Justin Purnell, we know this project will currently only build with the 12-01 snapshot release of Swift, not with the most recent 12-18 snapshot. The updated Swift package manager broke the Curassow build for version 0.2. The Curassow devs have already fixed this issue, but the fix hasn't made it into a release yet. For now, just use the 12-01 snapshot of Swift to build this project. The Swift buildpack will already pull the correct snapshot of Swift to use on Heroku (when using the pinned `.swift-version` file), so deployment should still be good.
-
 Next you'll want a Slack instance you administer. Slack is free for small teams, so just hit up [sign up](https://slack.com/create) page and off you go.
 
 Next, we'll need a Heroku account so we can deploy our app. Heroku is also free for development purposes, so breeze through the [sign up](https://signup.heroku.com) process. Once you have a Heroku account, install the [Heroku toolbelt](https://toolbelt.heroku.com/) for your platform. Once installed, login with the toolbelt by running `heroku login` on your command line. The entire interaction looks like:
