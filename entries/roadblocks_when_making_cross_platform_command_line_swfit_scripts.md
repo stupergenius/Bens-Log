@@ -41,7 +41,7 @@ Once we have the basics working we'll start filling out the implementation from 
 
 ## ✅ Argument Parsing
 
-I started off porting the bits of code that parses the arguments given in the command line invocation of the script. This actually turned out to be quite simple. I'm using the excellend [Commander](https://github.com/kylef/Commander) library contributed by [Kylef](https://github.com/kylef) and others. This is actually simpler than the [OptionKit](https://github.com/nomothetis/OptionKit) library I had used in the original post.
+I started off porting the bits of code that parses the arguments given in the command line invocation of the script. This actually turned out to be quite simple. I'm using the excellent [Commander](https://github.com/kylef/Commander) library contributed by [Kylef](https://github.com/kylef) and others. This is actually simpler than the [OptionKit](https://github.com/nomothetis/OptionKit) library I had used in the original post.
 
 This works well and actually reduces the code I needed to write. I included the Commander library in my `Packages.swift` file and was off to the races:
 
@@ -143,7 +143,7 @@ drwxr-xr-x  16 bsnider  775819049   544B Jan 13 19:11 .
 ...
 ```
 
-But in Linux we get the below output and the script never terminates (it just hanges until you kill it):
+But in Linux we get the below output and the script never terminates (it just hangs until you kill it):
 
 ```bash
 $ swift experiments/test_nstask.swift
