@@ -1,0 +1,131 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NameResolverState"
+- "=="
+- "NameResolver"
+provides-nominal:
+- "O3btc17NameResolverState"
+- "C3btc12NameResolver"
+provides-member:
+- ["O3btc17NameResolverState", ""]
+- ["C3btc12NameResolver", ""]
+depends-top-level:
+- "Equatable"
+- !private "dispatch_async"
+- !private "dispatch_semaphore_create"
+- "dispatch_semaphore_t"
+- "String"
+- "Bool"
+- "=="
+- "sockaddr"
+- "dispatch_queue_t"
+- !private "DISPATCH_TIME_FOREVER"
+- !private "DISPATCH_QUEUE_PRIORITY_DEFAULT"
+- !private "dispatch_sync"
+- !private "dispatch_get_global_queue"
+- "NameResolver"
+- "NameResolverState"
+- !private "BooleanLiteralType"
+- !private "dispatch_semaphore_wait"
+- "UInt"
+- !private "dispatch_queue_create"
+- "NSError"
+depends-member:
+- !private ["Ps9AnyObject", "DISPATCH_QUEUE_PRIORITY_DEFAULT"]
+- !private ["Ps9AnyObject", "DISPATCH_TIME_FOREVER"]
+- !private ["Ps9AnyObject", "_mutex"]
+- !private ["Ps9AnyObject", "_results"]
+- !private ["Ps9AnyObject", "_semaphore"]
+- !private ["Ps9AnyObject", "_status"]
+- !private ["Ps9AnyObject", "dispatch_async"]
+- !private ["Ps9AnyObject", "dispatch_get_global_queue"]
+- !private ["Ps9AnyObject", "dispatch_queue_create"]
+- !private ["Ps9AnyObject", "dispatch_semaphore_create"]
+- !private ["Ps9AnyObject", "dispatch_semaphore_wait"]
+- !private ["Ps9AnyObject", "dispatch_sync"]
+- !private ["Ps9AnyObject", "hostname"]
+- !private ["Ps9AnyObject", "port"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "Aborted"]
+- ["Ps9Equatable", "Error"]
+- ["Ps9Equatable", "Initialized"]
+- ["Ps9Equatable", "Resolved"]
+- ["Ps9Equatable", "Running"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["C3btc12NameResolver", "DISPATCH_QUEUE_PRIORITY_DEFAULT"]
+- !private ["C3btc12NameResolver", "DISPATCH_TIME_FOREVER"]
+- ["C3btc12NameResolver", "NameResolverState"]
+- ["C3btc12NameResolver", "String"]
+- ["C3btc12NameResolver", "UInt"]
+- !private ["C3btc12NameResolver", "_mutex"]
+- !private ["C3btc12NameResolver", "_results"]
+- !private ["C3btc12NameResolver", "_semaphore"]
+- !private ["C3btc12NameResolver", "_status"]
+- ["C3btc12NameResolver", "abort"]
+- ["C3btc12NameResolver", "deinit"]
+- !private ["C3btc12NameResolver", "dispatch_async"]
+- !private ["C3btc12NameResolver", "dispatch_get_global_queue"]
+- !private ["C3btc12NameResolver", "dispatch_queue_create"]
+- ["C3btc12NameResolver", "dispatch_queue_t"]
+- !private ["C3btc12NameResolver", "dispatch_semaphore_create"]
+- ["C3btc12NameResolver", "dispatch_semaphore_t"]
+- !private ["C3btc12NameResolver", "dispatch_semaphore_wait"]
+- !private ["C3btc12NameResolver", "dispatch_sync"]
+- ["C3btc12NameResolver", "hostname"]
+- ["C3btc12NameResolver", "init"]
+- ["C3btc12NameResolver", "port"]
+- ["C3btc12NameResolver", "run"]
+- ["C3btc12NameResolver", "sockaddr"]
+- ["C3btc12NameResolver", "status"]
+- ["O3btc17NameResolverState", "Aborted"]
+- ["O3btc17NameResolverState", "Error"]
+- ["O3btc17NameResolverState", "Initialized"]
+- ["O3btc17NameResolverState", "NSError"]
+- ["O3btc17NameResolverState", "Resolved"]
+- ["O3btc17NameResolverState", "Running"]
+- ["O3btc17NameResolverState", "deinit"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["P10Foundation12_CFBridgable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation22_NSObjectRepresentable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps8Hashable"
+- "C3btc12NameResolver"
+- "O3btc17NameResolverState"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "P10Foundation12_CFBridgable"
+- !private "P10Foundation22_NSObjectRepresentable"
+- !private "P10Foundation21_ObjectTypeBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/LibcShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RefCount.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/HeapObject.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/FoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/module.map"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/media/psf/Home/workspace/tinkerings/Bens-Log/blog-projects/swift-command-line-oss/.build/debug/Commander.swiftmodule"
+interface-hash: "9197687b4541efb369575b7386e1cdb4"

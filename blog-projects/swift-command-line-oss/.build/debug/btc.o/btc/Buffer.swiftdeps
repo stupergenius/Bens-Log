@@ -1,0 +1,319 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Buffer"
+provides-nominal:
+- "C3btc6Buffer"
+provides-member:
+- ["C3btc6Buffer", ""]
+depends-top-level:
+- !private "IntegerLiteralType"
+- "Int"
+- !private "=="
+- "String"
+- !private "-"
+- !private "+="
+- !private "ExtendedGraphemeClusterType"
+- !private "BooleanLiteralType"
+- !private "!="
+- !private "FloatLiteralType"
+- !private "Character"
+- !private "UnicodeScalar"
+- "NSData"
+- !private "<"
+- !private "NSMakeRange"
+- !private ">"
+- "NSMutableData"
+- "Buffer"
+- !private "StringLiteralType"
+- !private "&&"
+- "UInt8"
+- !private "UnicodeScalarType"
+- "UnsafeMutablePointer"
+depends-member:
+- !private ["Ps9AnyObject", "Character"]
+- !private ["Ps9AnyObject", "NSMakeRange"]
+- !private ["Ps9AnyObject", "NSMutableData"]
+- !private ["Ps9AnyObject", "UInt8"]
+- !private ["Ps9AnyObject", "UnicodeScalar"]
+- !private ["Ps9AnyObject", "UnsafeMutablePointer"]
+- !private ["Ps9AnyObject", "appendBytes"]
+- !private ["Ps9AnyObject", "data"]
+- !private ["Ps9AnyObject", "fillBuffer"]
+- !private ["Ps9AnyObject", "filler"]
+- !private ["Ps9AnyObject", "getBytes"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "length"]
+- !private ["Ps9AnyObject", "offset"]
+- !private ["Ps9AnyObject", "readCharacter"]
+- ["Ps9AnyObject", ""]
+- !private ["P9Commander19ArgumentConvertible", "append"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
+- !private ["Ps22BidirectionalIndexType", "alloc"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["P10Foundation10Bridgeable", "append"]
+- !private ["P10Foundation10Bridgeable", "init"]
+- !private ["P10Foundation10Bridgeable", "subscript"]
+- !private ["C3btc6Buffer", "Character"]
+- ["C3btc6Buffer", "Int"]
+- ["C3btc6Buffer", "NSData"]
+- !private ["C3btc6Buffer", "NSMakeRange"]
+- ["C3btc6Buffer", "NSMutableData"]
+- ["C3btc6Buffer", "String"]
+- ["C3btc6Buffer", "UInt8"]
+- !private ["C3btc6Buffer", "UnicodeScalar"]
+- ["C3btc6Buffer", "UnsafeMutablePointer"]
+- !private ["C3btc6Buffer", "data"]
+- ["C3btc6Buffer", "deinit"]
+- ["C3btc6Buffer", "fillBuffer"]
+- !private ["C3btc6Buffer", "filler"]
+- ["C3btc6Buffer", "init"]
+- !private ["C3btc6Buffer", "offset"]
+- !private ["C3btc6Buffer", "readCharacter"]
+- ["C3btc6Buffer", "readData"]
+- ["C3btc6Buffer", "readLine"]
+- !private ["Ps11CVarArgType", "alloc"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Vs9Character", "init"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "alloc"]
+- !private ["Ps10Comparable", "append"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "alloc"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "appendBytes"]
+- !private ["Ps28CustomDebugStringConvertible", "getBytes"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "length"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "appendBytes"]
+- !private ["Ps23CustomStringConvertible", "getBytes"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "length"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "alloc"]
+- !private ["Ps9Equatable", "append"]
+- !private ["Ps9Equatable", "appendBytes"]
+- !private ["Ps9Equatable", "getBytes"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "length"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "append"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps16ForwardIndexType", "alloc"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "alloc"]
+- !private ["Ps8Hashable", "append"]
+- !private ["Ps8Hashable", "appendBytes"]
+- !private ["Ps8Hashable", "getBytes"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "length"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Ps14MirrorPathType", "append"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["Ps16MutableSliceable", "subscript"]
+- !private ["P10Foundation8NSCoding", "appendBytes"]
+- !private ["P10Foundation8NSCoding", "getBytes"]
+- !private ["P10Foundation8NSCoding", "init"]
+- !private ["P10Foundation8NSCoding", "length"]
+- !private ["P10Foundation9NSCopying", "appendBytes"]
+- !private ["P10Foundation9NSCopying", "getBytes"]
+- !private ["P10Foundation9NSCopying", "init"]
+- !private ["P10Foundation9NSCopying", "length"]
+- !private ["C10Foundation6NSData", "appendBytes"]
+- !private ["C10Foundation6NSData", "getBytes"]
+- !private ["C10Foundation6NSData", "init"]
+- !private ["C10Foundation6NSData", "length"]
+- !private ["P10Foundation16NSMutableCopying", "appendBytes"]
+- !private ["P10Foundation16NSMutableCopying", "getBytes"]
+- !private ["P10Foundation16NSMutableCopying", "init"]
+- !private ["P10Foundation16NSMutableCopying", "length"]
+- !private ["C10Foundation13NSMutableData", "appendBytes"]
+- !private ["C10Foundation13NSMutableData", "getBytes"]
+- !private ["C10Foundation13NSMutableData", "init"]
+- !private ["C10Foundation13NSMutableData", "length"]
+- !private ["C10Foundation8NSObject", "appendBytes"]
+- !private ["C10Foundation8NSObject", "getBytes"]
+- !private ["C10Foundation8NSObject", "init"]
+- !private ["C10Foundation8NSObject", "length"]
+- !private ["P10Foundation16NSObjectProtocol", "appendBytes"]
+- !private ["P10Foundation16NSObjectProtocol", "getBytes"]
+- !private ["P10Foundation16NSObjectProtocol", "init"]
+- !private ["P10Foundation16NSObjectProtocol", "length"]
+- !private ["P10Foundation14NSSecureCoding", "appendBytes"]
+- !private ["P10Foundation14NSSecureCoding", "getBytes"]
+- !private ["P10Foundation14NSSecureCoding", "init"]
+- !private ["P10Foundation14NSSecureCoding", "length"]
+- !private ["Ps21NilLiteralConvertible", "alloc"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "append"]
+- !private ["Ps21RandomAccessIndexType", "alloc"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "append"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "alloc"]
+- !private ["SS", "append"]
+- !private ["Ps30StringInterpolationConvertible", "append"]
+- !private ["Ps24StringLiteralConvertible", "append"]
+- !private ["Sc", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "append"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Sp", "alloc"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps10_ArrayType", "subscript"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "append"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "append"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "append"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "append"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["P10Foundation12_CFBridgable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation12_CFBridgable", "append"]
+- !private ["P10Foundation12_CFBridgable", "appendBytes"]
+- !private ["P10Foundation12_CFBridgable", "getBytes"]
+- !private ["P10Foundation12_CFBridgable", "init"]
+- !private ["P10Foundation12_CFBridgable", "length"]
+- !private ["P10Foundation12_CFBridgable", "subscript"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps14_Incrementable", "alloc"]
+- !private ["P10Foundation12_NSBridgable", "append"]
+- !private ["P10Foundation12_NSBridgable", "init"]
+- !private ["P10Foundation12_NSBridgable", "subscript"]
+- !private ["P10Foundation22_NSObjectRepresentable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation22_NSObjectRepresentable", "append"]
+- !private ["P10Foundation22_NSObjectRepresentable", "init"]
+- !private ["P10Foundation22_NSObjectRepresentable", "subscript"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "append"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "init"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps12_PointerType", "alloc"]
+- !private ["Ps22_RandomAccessAmbiguity", "alloc"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "alloc"]
+- !private ["Ps12_Reflectable", "append"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "P9Commander19ArgumentConvertible"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "P10Foundation10Bridgeable"
+- "C3btc6Buffer"
+- !private "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- !private "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- !private "P10Foundation8NSCoding"
+- !private "P10Foundation9NSCopying"
+- !private "C10Foundation6NSData"
+- !private "P10Foundation16NSMutableCopying"
+- !private "C10Foundation13NSMutableData"
+- !private "C10Foundation8NSObject"
+- !private "P10Foundation16NSObjectProtocol"
+- !private "P10Foundation14NSSecureCoding"
+- !private "Ps21NilLiteralConvertible"
+- !private "Sq"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Sp"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "P10Foundation12_CFBridgable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "P10Foundation12_NSBridgable"
+- !private "P10Foundation22_NSObjectRepresentable"
+- !private "P10Foundation21_ObjectTypeBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps12_PointerType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/LibcShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RefCount.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/HeapObject.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/FoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/module.map"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/media/psf/Home/workspace/tinkerings/Bens-Log/blog-projects/swift-command-line-oss/.build/debug/Commander.swiftmodule"
+interface-hash: "00ba6e8ec327d04d19e8d90985f2ab90"

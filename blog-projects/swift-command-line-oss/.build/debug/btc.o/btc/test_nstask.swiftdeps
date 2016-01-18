@@ -1,0 +1,158 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "task"
+- "pipe"
+provides-nominal:
+provides-member:
+depends-top-level:
+- "StringLiteralType"
+- "!="
+- "IntegerLiteralType"
+- "task"
+- "Array"
+- "UnicodeScalarType"
+- "pipe"
+- "NSTask"
+- "FloatLiteralType"
+- "NSPipe"
+- "print"
+depends-member:
+- ["Ps9AnyObject", "arguments"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "launch"]
+- ["Ps9AnyObject", "launchPath"]
+- ["Ps9AnyObject", "standardOutput"]
+- ["Ps9AnyObject", "terminationStatus"]
+- ["Ps9AnyObject", "waitUntilExit"]
+- ["Sa", "Element"]
+- ["Ps23ArrayLiteralConvertible", "Element"]
+- ["Sb", "_getBuiltinLogicValue"]
+- ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["P10Foundation10Bridgeable", "Element"]
+- ["Ps14CollectionType", "Element"]
+- ["Ps28CustomDebugStringConvertible", "Element"]
+- ["Ps28CustomDebugStringConvertible", "arguments"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "launch"]
+- ["Ps28CustomDebugStringConvertible", "launchPath"]
+- ["Ps28CustomDebugStringConvertible", "standardOutput"]
+- ["Ps28CustomDebugStringConvertible", "terminationStatus"]
+- ["Ps28CustomDebugStringConvertible", "waitUntilExit"]
+- ["Ps23CustomStringConvertible", "Element"]
+- ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "arguments"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "launch"]
+- ["Ps23CustomStringConvertible", "launchPath"]
+- ["Ps23CustomStringConvertible", "standardOutput"]
+- ["Ps23CustomStringConvertible", "terminationStatus"]
+- ["Ps23CustomStringConvertible", "waitUntilExit"]
+- ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "arguments"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "launch"]
+- ["Ps9Equatable", "launchPath"]
+- ["Ps9Equatable", "standardOutput"]
+- ["Ps9Equatable", "terminationStatus"]
+- ["Ps9Equatable", "waitUntilExit"]
+- ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "arguments"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "launch"]
+- ["Ps8Hashable", "launchPath"]
+- ["Ps8Hashable", "standardOutput"]
+- ["Ps8Hashable", "terminationStatus"]
+- ["Ps8Hashable", "waitUntilExit"]
+- ["Ps9Indexable", "Element"]
+- ["Ps21MutableCollectionType", "Element"]
+- ["Ps16MutableIndexable", "Element"]
+- ["Ps16MutableSliceable", "Element"]
+- ["C10Foundation8NSObject", "arguments"]
+- ["C10Foundation8NSObject", "init"]
+- ["C10Foundation8NSObject", "launch"]
+- ["C10Foundation8NSObject", "launchPath"]
+- ["C10Foundation8NSObject", "standardOutput"]
+- ["C10Foundation8NSObject", "terminationStatus"]
+- ["C10Foundation8NSObject", "waitUntilExit"]
+- ["P10Foundation16NSObjectProtocol", "arguments"]
+- ["P10Foundation16NSObjectProtocol", "init"]
+- ["P10Foundation16NSObjectProtocol", "launch"]
+- ["P10Foundation16NSObjectProtocol", "launchPath"]
+- ["P10Foundation16NSObjectProtocol", "standardOutput"]
+- ["P10Foundation16NSObjectProtocol", "terminationStatus"]
+- ["P10Foundation16NSObjectProtocol", "waitUntilExit"]
+- ["C10Foundation6NSPipe", "init"]
+- ["C10Foundation6NSTask", "arguments"]
+- ["C10Foundation6NSTask", "init"]
+- ["C10Foundation6NSTask", "launch"]
+- ["C10Foundation6NSTask", "launchPath"]
+- ["C10Foundation6NSTask", "standardOutput"]
+- ["C10Foundation6NSTask", "terminationStatus"]
+- ["C10Foundation6NSTask", "waitUntilExit"]
+- ["Sq", "deinit"]
+- ["Ps30RangeReplaceableCollectionType", "Element"]
+- ["Ps12SequenceType", "Element"]
+- ["Ps10_ArrayType", "Element"]
+- ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["P10Foundation12_CFBridgable", "Element"]
+- ["P10Foundation12_CFBridgable", "_getBuiltinLogicValue"]
+- ["Ps24_DestructorSafeContainer", "Element"]
+- ["P10Foundation12_NSBridgable", "Element"]
+- ["P10Foundation22_NSObjectRepresentable", "Element"]
+- ["P10Foundation22_NSObjectRepresentable", "_getBuiltinLogicValue"]
+- ["P10Foundation21_ObjectTypeBridgeable", "Element"]
+- ["P10Foundation21_ObjectTypeBridgeable", "_getBuiltinLogicValue"]
+- ["Ps12_Reflectable", "Element"]
+- ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sa"
+- "Ps23ArrayLiteralConvertible"
+- "Sb"
+- "Ps25BooleanLiteralConvertible"
+- "Ps11BooleanType"
+- "P10Foundation10Bridgeable"
+- "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "Ps9Indexable"
+- "Ps21MutableCollectionType"
+- "Ps16MutableIndexable"
+- "Ps16MutableSliceable"
+- "C10Foundation8NSObject"
+- "P10Foundation16NSObjectProtocol"
+- "C10Foundation6NSPipe"
+- "C10Foundation6NSTask"
+- "Sq"
+- "Ps30RangeReplaceableCollectionType"
+- "Ps12SequenceType"
+- "Ps10_ArrayType"
+- "Ps33_BuiltinBooleanLiteralConvertible"
+- "P10Foundation12_CFBridgable"
+- "Ps24_DestructorSafeContainer"
+- "P10Foundation12_NSBridgable"
+- "P10Foundation22_NSObjectRepresentable"
+- "P10Foundation21_ObjectTypeBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/LibcShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/RefCount.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/HeapObject.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/FoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/shims/module.map"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/bsnider/swift/versions/swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu14.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/media/psf/Home/workspace/tinkerings/Bens-Log/blog-projects/swift-command-line-oss/.build/debug/Commander.swiftmodule"
+interface-hash: "252938d864be6538266e0a356f99a33d"

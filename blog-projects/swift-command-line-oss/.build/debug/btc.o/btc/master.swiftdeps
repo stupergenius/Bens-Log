@@ -1,0 +1,5 @@
+version: "Swift version 2.2-dev (LLVM 3ebdbb2c7e, Clang f66c5bb67b, Swift 42591f7cba)"
+options: "821ab36a134d516d9513ce0253f34552"
+build_time: [506390448, 657112000]
+inputs:
+  "/media/psf/Home/workspace/tinkerings/Bens-Log/blog-projects/swift-command-line-oss/Sources/main.swift": [506390446, 0]
