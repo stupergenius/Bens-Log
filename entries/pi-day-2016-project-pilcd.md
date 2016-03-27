@@ -8,7 +8,7 @@ Every year [Pi Day](http://www.piday.org) rolls around and I always have the int
 
 Well... it worked! This year, I present you with the PiLCD Arduino project:
 
-<a href="http://gifyu.com/image/RdD" target="_blank"><img src="http://gifyu.com/images/IMG_0101.gif" alt="Action Shot" width="320" height="320" border="0" /></a>
+<a href="http://imgur.com/2gC889M"><img src="http://i.imgur.com/2gC889M.gif" title="source: imgur.com" /></a>
 
 ## Rounding Is For Squares
 

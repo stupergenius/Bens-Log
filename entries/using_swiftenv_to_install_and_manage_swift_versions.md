@@ -16,7 +16,7 @@ The swiftenv tool appears to be modeled after the Java tool [jenv](http://www.je
 
 ## One Version Manager to Bring Them All
 
-Installing swift env is fairly straight-forward. The [installation instructions](https://github.com/kylef/swiftenv#installation) cover all you need to know. I was able to install it on my Linux machine without any troubles. At the end, after reloading your shell, running the below command should work and output your currently installed Swift version (likely it will be set to "system" since we haven't yet installed a Swift version yet).
+Installing swift env is fairly straight-forward. The [installation instructions](https://github.com/kylef/swiftenv#installation) cover all you need to know. I was able to install it on my Linux machine without any troubles. At the end, after reloading your shell, running the below command should work and output your currently installed Swift version (likely it will be set to "system" since we haven't yet installed a new Swift version).
 
 ```bash
 $ swiftenv version

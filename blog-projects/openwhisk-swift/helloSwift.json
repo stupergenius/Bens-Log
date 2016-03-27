@@ -1,0 +1,20 @@
+{
+  "name": "joke",
+  "subject": "ben@bensnider.com",
+  "activationId": "a4146f30b1a94ff0a3feaabb9e512078",
+  "publish": false,
+  "annotations": [],
+  "version": "0.0.2",
+  "response": {
+    "result": {
+      "text": "Current OpenWhisk performance...",
+      "response_type": "in_channel"
+    },
+    "success": true,
+    "status": "success"
+  },
+  "end": 1459042402624,
+  "logs": [],
+  "start": 1459042402598,
+  "namespace": "ben@bensnider.com"
+}
