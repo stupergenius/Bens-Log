@@ -27,6 +27,7 @@ tool: clean setup $(SOURCE) link
 
 ## COMPILE RULES FOR FILES ##
 
+# compiles joke.swift
 %.swift:
 	$(SWIFT_OLD) -primary-file $(SRC_DIR)/$@ \
 		$(addprefix $(SRC_DIR)/,$(filter-out $@,$(SOURCE))) \
