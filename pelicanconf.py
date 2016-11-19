@@ -28,6 +28,7 @@ WITH_PAGINATION = True
 TIMEZONE = 'America/Denver'
 DEFAULT_DATE = 'fs'
 DEFAULT_LANG = u'en'
+FAVICON = 'favicon.ico'
 
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
@@ -67,9 +68,13 @@ SOCIAL = (
 # A list of files to copy from the source to the destination
 STATIC_PATHS = [
     'extra/robots.txt',
+    'extra/favicon.ico',
     'extra/404.html',
 ]
+ARTICLE_EXCLUDES = ['extra']
+PAGE_EXCLUDES = ['extra']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/404.html': {'path': '404.html'},
 }

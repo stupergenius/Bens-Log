@@ -6,7 +6,7 @@ Tags: swift, development, iOS
 
 [Previously](http://www.bensnider.com/making-swift-code-more-swifty-and-an-mvvm-aside.html), as an exercise in converting an existing app to use a [MVVM style architecture](https://en.wikipedia.org/wiki/Model–view–viewmodel), and to make the code more Swifty, I refactored [an example](https://github.com/DenverSwiftHeads/SubstringHashSwift) app provided by [Vui Nguyen](https://sunfishempire.wordpress.com/). This time, we'll explore what it takes to refactor this app to Swift 3, while also taking a look at separating out our view model layer even more. We'll also investigate how to make this code more idiomatic Swift 3 and even a little light [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).
 
-Since the [news](http://ericasadun.com/2016/11/10/xcode-8-2-deprecates-swift-2-3/) that Xcode 8.2 will be the last version to support Swift 3, I decided to jump on the bandwagon of Swift 3 refactors. Hopefully this post gives some insights as to process, and not solely syntax differences. This post also contains some extra considerations around decoupling and changes to our [MVVM example app](https://github.com/DenverSwiftHeads/SubstringHashSwift).
+Since the [news](http://ericasadun.com/2016/11/10/xcode-8-2-deprecates-swift-2-3/) that Xcode 8.2 will be the last version to support Swift 2.3, I decided to jump on the bandwagon of Swift 3 refactors. Hopefully this post gives some insights as to process, and not solely syntax differences. This post also contains some extra considerations around decoupling and changes to our [MVVM example app](https://github.com/DenverSwiftHeads/SubstringHashSwift).
 
 For reference, here are some commits along the way, and the pull request that combines them:
 
@@ -88,7 +88,7 @@ let color = UIColor.green
 
 We could continue to manually refactor these classes using the compiler as a feedback mechanism, or we can jump into using the migration assistant. I try to do as many of these unique migration errors manually until they start to get repetitive, and at that point reverting to the migration assistant. This should allow me to get exposed to as many unique errors and required changes as possible while still being useful to the learning process.
 
-## Swift Migration Asssitant
+## Swift Migration Assitant
 
 Now, as soon we feel like we have a good understanding of the Swift 3 changes, we can use the [migration assistant](https://swift.org/migration-guide/) to convert the remained of the project to Swift 3 syntax. For a small project like this, we probably don't have much to worry about in terms of the migration assistant failing catastrophically, so hopefully this is the easy part. 😬
 
