@@ -8,9 +8,9 @@ import Foundation
 
 // Handy enum to store the selected interval type.
 enum IntervalType: String, CustomStringConvertible {
-    case LastIntervalType = "last"
-    case HourlyIntervalType = "hourly"
-    case VWAPIntervalType = "vwap"
+    case lastIntervalType = "last"
+    case hourlyIntervalType = "hourly"
+    case vwapIntervalType = "vwap"
 
     var description: String {
         get {
@@ -19,15 +19,27 @@ enum IntervalType: String, CustomStringConvertible {
     }
 }
 
-func bitstampURL(interval: IntervalType) -> String {
-    if (interval == .LastIntervalType || interval == .VWAPIntervalType) {
-        return "https://www.bitstamp.net/api/ticker/"
-    } else {
-        return "https://www.bitstamp.net/api/ticker_hour/"
-    }
+extension IntervalType {
+    var bitstampURL: String { get {
+        switch self {
+        case .lastIntervalType, .vwapIntervalType:
+            return "https://www.bitstamp.net/api/ticker/"
+        default:
+            return "https://www.bitstamp.net/api/ticker_hour/"
+        }
+    }}
+    
+    var priceKey: String { get {
+        switch self {
+        case .lastIntervalType, .hourlyIntervalType:
+            return "last"
+        default:
+            return "vwap"
+        }
+    }}
 }
 
-func retrievePriceData(interval: IntervalType) -> NSData? {
+func retrievePriceData(_ interval: IntervalType) -> Data? {
     // let
     //     url = bitstampURL(interval)
     //     request = NSURLRequest(URL: url),
@@ -48,10 +60,12 @@ func retrievePriceData(interval: IntervalType) -> NSData? {
 
     // dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
 
-    let url = bitstampURL(interval),
-        data = NSData(contentsOfURL: NSURL(string: url)!)
-
-    return data
+    guard let url = URL(string: interval.bitstampURL) else { return nil }
+    do {
+        return try Data(contentsOf: url)
+    } catch {
+        return nil
+    }
 
     // let task = NSTask()
     // task.launchPath = "/usr/bin/curl"
@@ -71,20 +85,11 @@ func retrievePriceData(interval: IntervalType) -> NSData? {
     // }
 }
 
-func priceKey(interval: IntervalType) -> String {
-    if (interval == .LastIntervalType || interval == .HourlyIntervalType) {
-        return "last"
-    } else {
-        return "vwap"
-    }
-}
-
-func parsePrice(interval: IntervalType, data: NSData) -> Double? {
+func parsePrice(_ interval: IntervalType, data: Data) -> Double? {
     do {
-        let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
-        if let
-            priceData = json as? Dictionary<String, AnyObject>,
-            priceString = priceData[priceKey(interval)] as? String {
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
+        if let priceData = json as? Dictionary<String, AnyObject>,
+           let priceString = priceData[interval.priceKey] as? String {
             // Using the failable initializer to convert to a Double?
             return Double(priceString)
         }
@@ -94,22 +99,24 @@ func parsePrice(interval: IntervalType, data: NSData) -> Double? {
     return nil
 }
 
-let main = command(
-    Option("interval", IntervalType.LastIntervalType.rawValue)
-) { interval in
-    if let intervalType = IntervalType(rawValue: interval.lowercaseString) {
-        if let
-            priceData = retrievePriceData(intervalType),
-            price = parsePrice(intervalType, data: priceData) {
+func fail(withMessage message: String, andCode code: Int32 = 0) -> Never  {
+    print(message)
+    exit(code)
+}
 
-            // Success!
-            print(NSString(format: "%0.2f", price))
-        } else {
-            print("There was an error retrieving current price data.")
-        }
-    } else {
-        print("Please provide one of the following interval types using the --interval option: last, hourly, vwap.")
+let main = command(
+    Option("interval", IntervalType.lastIntervalType.rawValue)
+) { interval in
+    guard let intervalType = IntervalType(rawValue: interval.lowercased()) else {
+        fail(withMessage: "Please provide one of the following interval types using the --interval option: last, hourly, vwap.")
     }
+    
+    guard let priceData = retrievePriceData(intervalType),
+          let price = parsePrice(intervalType, data: priceData) else {
+        fail(withMessage: "There was an error retrieving current price data.")
+    }
+    
+    print(String(format: "%0.2f", price))
 }
 
 main.run()
