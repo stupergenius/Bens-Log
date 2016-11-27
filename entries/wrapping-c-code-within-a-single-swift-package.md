@@ -144,9 +144,9 @@ public struct add_operation {
     public init(x: Int, y: Int, result: Int)
 }
 
-public func add\(_ x: Int, _ y: Int) -> Int
-public func added\(_ op: add_operation) -> add_operation
-public func adding\(_ op: UnsafeMutablePointer<add_operation>!)
+public func add(_ x: Int, _ y: Int) -> Int
+public func added(_ op: add_operation) -> add_operation
+public func adding(_ op: UnsafeMutablePointer<add_operation>!)
 ```
 
 As we can see, this is **very** similar to our C header, with some Swift specific `UnsafeMutablePointer` bits in there (that we're conveniently ignoring for now). This is actually also fairly Swifty. Swift has imported the struct faithfully, and even provided us with default and memberwise initializers. Note however that the struct is not immutable. We could choose to fix that with our wrapper if we wanted to expose a similar struct type, but in our case we don't really care.
