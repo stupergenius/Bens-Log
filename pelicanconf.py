@@ -3,13 +3,13 @@ AUTHOR = u'Ben Snider'
 SITENAME = u"Ben Snider"
 SITETITLE = SITENAME
 SITESUBTITLE = 'Open Source Swift and iOS Development'
-# SITEURL = '//localhost:8000'
+#SITEURL = '//localhost:8000'
 SITEURL = 'http://www.bensnider.com'
 SITELOGO = '//www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=140'
 
 GOOGLE_ANALYTICS = 'UA-70428973-1'
 ROBOTS = 'index, follow'
-COPYRIGHT_YEAR = 2015
+COPYRIGHT_YEAR = 2016
 CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0', 'slug': 'by-sa' }
 
 MAIN_MENU = True
@@ -29,6 +29,7 @@ TIMEZONE = 'America/Denver'
 DEFAULT_DATE = 'fs'
 DEFAULT_LANG = u'en'
 FAVICON = 'favicon.ico'
+PYGMENTS_STYLE = 'xcode'
 
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
