@@ -5,9 +5,9 @@ import OptionKit
 
 // Handy enum to store the selected interval type.
 enum IntervalType: String, CustomStringConvertible {
-    case LastIntervalType = "last"
-    case HourlyIntervalType = "hourly"
-    case VWAPIntervalType = "vwap"
+    case last = "last"
+    case hourly = "hourly"
+    case vwap = "vwap"
 
     var description: String {
         get {
@@ -16,12 +16,12 @@ enum IntervalType: String, CustomStringConvertible {
     }
 }
 
-func intervalFromArgs(args: Array<String>) -> String? {
-    let intervalOpt = Option(trigger:.Mixed("i", "interval"), numberOfParameters: 1)
-    let helpOpt = Option(trigger:.Mixed("h", "help"))
+func intervalFrom(args: Array<String>) -> String? {
+    let intervalOpt = Option(trigger: .mixed("i", "interval"), numberOfParameters: 1)
+    let helpOpt = Option(trigger: .mixed("h", "help"))
     let parser = OptionParser(definitions:[intervalOpt, helpOpt])
     
-    func printHelp(parser: OptionParser) {
+    func printHelp(_ parser: OptionParser) {
         print(parser.helpStringForCommandName("btc.swift"))
     }
     
@@ -34,12 +34,12 @@ func intervalFromArgs(args: Array<String>) -> String? {
             if let intervalOption = options[intervalOpt] {
                 // Passing numberOfParameters to the interval option lets us
                 // retrieve the interval parameter directly from the option.
-                return intervalOption.joinWithSeparator(" ")
+                return intervalOption.joined(separator: " ")
             } else {
-                return IntervalType.LastIntervalType.rawValue
+                return IntervalType.last.rawValue
             }
         }
-    } catch let OptionKitError.InvalidOption(description: description) {
+    } catch let OptionKitError.invalidOption(description: description) {
         // Catches any invalid arguments and prints the invalid parameter.
         print(description)
     } catch {
@@ -49,22 +49,22 @@ func intervalFromArgs(args: Array<String>) -> String? {
     return nil
 }
 
-func bitstampURL(interval: IntervalType) -> NSURL {
-    if (interval == .LastIntervalType || interval == .VWAPIntervalType) {
-        return NSURL(string: "https://www.bitstamp.net/api/ticker/")!
+func bitstampURL(_ interval: IntervalType) -> URL {
+    if (interval == .last || interval == .vwap) {
+        return URL(string: "https://www.bitstamp.net/api/ticker/")!
     } else {
-        return NSURL(string: "https://www.bitstamp.net/api/ticker_hour/")!
+        return URL(string: "https://www.bitstamp.net/api/ticker_hour/")!
     }
 }
 
-func retrievePriceData(interval: IntervalType, completion: NSData? -> Void) -> Void {
+func retrievePriceData(_ interval: IntervalType, completion: @escaping (Data?) -> Void) -> Void {
     let
         url = bitstampURL(interval),
-        request = NSURLRequest(URL: url),
-        session = NSURLSession.sharedSession(),
-        semaphore = dispatch_semaphore_create(0)
+        request = URLRequest(url: url),
+        session = URLSession.shared,
+        semaphore = DispatchSemaphore(value: 0)
 
-    let task = session.dataTaskWithRequest(request) {
+    let task = session.dataTask(with: request) {
          (data, response, error) -> Void in
 
         if error == nil {
@@ -72,27 +72,26 @@ func retrievePriceData(interval: IntervalType, completion: NSData? -> Void) -> V
         } else {
             completion(nil)
         }
-        dispatch_semaphore_signal(semaphore)
+        semaphore.signal()
     }
     task.resume()
 
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+    let _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 }
 
-func priceKey(interval: IntervalType) -> String {
-    if (interval == .LastIntervalType || interval == .HourlyIntervalType) {
+func priceKey(_ interval: IntervalType) -> String {
+    if (interval == .last || interval == .hourly) {
         return "last"
     } else {
         return "vwap"
     }
 }
 
-func parsePrice(interval: IntervalType, data: NSData) -> Double? {
+func parsePrice(_ interval: IntervalType, data: Data) -> Double? {
     do {
-        let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
-        if let
-            priceData = json as? Dictionary<String, AnyObject>,
-            priceString = priceData[priceKey(interval)] as? String {
+        let json = try JSONSerialization.jsonObject(with: data, options: [])
+        if let priceData = json as? Dictionary<String, AnyObject>,
+           let priceString = priceData[priceKey(interval)] as? String {
             // Using the failable initializer to convert to a Double?
             return Double(priceString)
         }
@@ -102,12 +101,11 @@ func parsePrice(interval: IntervalType, data: NSData) -> Double? {
     return nil
 }
 
-if let interval = intervalFromArgs(Array(Process.arguments[1..<Process.arguments.count])) {
-    if let intervalType = IntervalType(rawValue: interval.lowercaseString) {
+if let interval = intervalFrom(args: Array(CommandLine.arguments[1..<CommandLine.arguments.count])) {
+    if let intervalType = IntervalType(rawValue: interval.lowercased()) {
         retrievePriceData(intervalType) {data in
-            if let
-                priceData = data,
-                price = parsePrice(intervalType, data: priceData) {
+            if let priceData = data,
+               let price = parsePrice(intervalType, data: priceData) {
                 // Success!
                 print(NSString(format: "%0.2f", price))
             } else {

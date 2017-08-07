@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Commander",
+        "repositoryURL": "http://github.com/kylef/Commander",
+        "state": {
+          "branch": null,
+          "revision": "03ae17a2cdea36a222ee1432568246c4ecdb9d7d",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "Spectre",
+        "repositoryURL": "https://github.com/kylef/Spectre",
+        "state": {
+          "branch": null,
+          "revision": "e46b75cf03ad5e563b4b0a5068d3d6f04d77d80b",
+          "version": "0.7.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
