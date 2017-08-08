@@ -8,13 +8,13 @@ import OptionKit
 
 // OptionKit lets us define long and short params, here we define two:
 // one for help and one for say.
-let sayOpt = Option(trigger:.Mixed("s", "say"))
-let helpOpt = Option(trigger:.Mixed("h", "help"))
+let sayOpt = Option(trigger: .mixed("s", "say"))
+let helpOpt = Option(trigger: .mixed("h", "help"))
 let parser = OptionParser(definitions:[sayOpt, helpOpt])
-let actualArguments = Array(Process.arguments[1..<Process.arguments.count])
+let actualArguments = Array(CommandLine.arguments[1..<CommandLine.arguments.count])
 
 // Simple function to print the "help" message.
-func printHelp(parser: OptionParser) {
+func printHelp(_ parser: OptionParser) {
     print(parser.helpStringForCommandName("options.swift"))
 }
 
@@ -30,14 +30,14 @@ do {
         // Otherwise, if the say option was specified, print the rest of the
         // arguments back out to the user.
         if options[sayOpt] != nil {
-            let toSay = rest.joinWithSeparator(" ")
+            let toSay = rest.joined(separator: " ")
             print(toSay)
         // And lastly if no arguments were given, print the help message.
         } else {
             printHelp(parser)
         }
     }
-} catch let OptionKitError.InvalidOption(description: description) {
+} catch let OptionKitError.invalidOption(description: description) {
     // Catches any invalid arguments and prints the invalid parameter.
     print(description)
 }
