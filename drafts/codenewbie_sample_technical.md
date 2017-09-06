@@ -1,4 +1,4 @@
-# Key Derivation Functions and Hashing PAsswords
+# Key Derivation Functions and Password Hashing
 
 With [so many](https://www.troyhunt.com/inside-the-massive-711-million-record-onliner-spambot-dump/) data [breaches](https://www.devicelock.com/blog/2960.html) in the news, and with so many [user accounts](https://www.nytimes.com/2016/12/14/technology/yahoo-hack.html?mcubz=3) being leaked, the question of *[have I been pwned](https://haveibeenpwned.com)* is becoming more common than ever. Worst case, leaked passwords are stored in plain text or in an insecure hash format (e.g. [MD5](https://www.schneier.com/cgi-bin/mt/mt-search.cgi?search=MD5&__mode=tag&IncludeBlogs=2&limit=10&page=1)). However, one of the strongest techniques to store password material is by hashing the password using a Key Derivation Function (aka a KDF). This technique is becoming more popular in the wake of such breaches, but understanding how it works and how it promises to strengthen password storage is often glossed over.
 
