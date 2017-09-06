@@ -1,0 +1,9 @@
+# What Is The Cloud?
+
+Phrases like "the cloud", "cloud hosted", and "cloud native" are appearing more often in news surrounding the tech industry. Often these words are bandied about as a sort of badge for new tech announcements. Indeed, the cloud is on the rise, but what is it, why is it important, and why is everything now "in the cloud"?
+
+Put simply, the cloud is a sort of shared resource pool for computer systems and data storage. The classic example is that of a company needing a public website to sell its wares. The company has a choice to make regarding how people get access to that site: they can buy, physically make space for, and maintain the computers that serve the site to visitors themselves, or they can effectively buy time and resources in a "cloud" computer network. Instead of having a literal closet of computers, many companies are now choosing the time share model of computer resources, and this is manifest in the cloud movement. Indeed, [Amazon went this way](https://aws.amazon.com/what-is-aws/) and built their own cloud that they now sell as a service to other companies.
+
+The cloud is not entirely important to the consumers of the aforementioned website, but often times the cloud is more resilient and robust than a computer network an independent company could build, and subsequently, visitors are more likely to have a fast and reliable experience on sites hosted in the cloud. Similarly, for the company buying computer resources in the cloud, the increased availability to the customer is a good thing, and so is being able to specialize in their core differentiator, rather than spending time maintaining a fleet of computers.
+
+So, the next time you hear "the cloud", don't think of the bulbous, pillowy white stuff in the sky, and instead, think of websites.
