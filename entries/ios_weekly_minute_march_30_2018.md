@@ -12,7 +12,7 @@ Back on track this week with some small refinements. Enjoy!
 
 [Apple' Spring Event](https://www.apple.com/apple-events/march-2018/) was held in a Chicago school this week, with a focus on all things education. Nothing much groundbreaking, really. A new, cheaper, and upgraded [9.7" iPad](https://www.apple.com/ipad-9.7/) with support for the Apple Pencil, a new and cheaper [Crayon pencil from Logitech](https://www.logitech.com/en-us/product/crayon), some software updates to the [iWork suite](https://www.theverge.com/2018/3/27/17156316/apple-iwork-smart-annotation-pages), and the [Schoolwork app](https://www.apple.com/education/teaching-tools/) for teachers. Sadly, the Crayon appears to only be available to the education market, and will not be available for general retail.
 
-Apple also announced [ClassKit](https://developer.apple.com/classkit/), which will be released in Xcode 9.4 supporting iOS 11.4. From the small amount of information available about ClassKit, it appears to allows app integration with the newly announced Schoolwork app.
+Apple also announced [ClassKit](https://developer.apple.com/classkit/), which will be released in Xcode 9.4 supporting iOS 11.4. From the small amount of information available about ClassKit, it appears to allow app integration with the newly announced Schoolwork app.
 
 # Articles I'm Reading
 
