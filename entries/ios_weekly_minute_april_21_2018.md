@@ -39,7 +39,7 @@ This approach [isn't new](https://www.youtube.com/watch?v=DrdxSNG-_DE), but it's
 
 ### Be offensive: Proactively Assessing Your iOS Applications
 
-From last year's [Mobile+Web Devcon](http://mobilewebdevconference.com/san-francisco-2017/), [Dave Lindner](https://twitter.com/golfhackerdave]) talks us through [how to proactively assess](https://academy.realm.io/posts/david-lindner-mobile-web-devcon-proactively-assessing-your-ios-applications/) application security, and how to address common threat models. The talk follows the [OWASP top 10](https://www.owasp.org/index.php/OWASP_Mobile_Security_Project#tab=Top_10_Mobile_Risks) security guidelines. I appreciate this because I'd bet many of us have committed at least one of these flaws, and it's always good to keep security top of mind.
+From last year's [Mobile+Web Devcon](http://mobilewebdevconference.com/san-francisco-2017/), [Dave Lindner](https://twitter.com/golfhackerdave) talks us through [how to proactively assess](https://academy.realm.io/posts/david-lindner-mobile-web-devcon-proactively-assessing-your-ios-applications/) application security, and how to address common threat models. The talk follows the [OWASP top 10](https://www.owasp.org/index.php/OWASP_Mobile_Security_Project#tab=Top_10_Mobile_Risks) security guidelines. I appreciate this because I'd bet many of us have committed at least one of these flaws, and it's always good to keep security top of mind.
 
 ---
 
