@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import get from 'lodash/get'
 
 import Bio from '../components/Bio'
 import { rhythm, scale } from '../utils/typography'
@@ -9,7 +8,7 @@ import { rhythm, scale } from '../utils/typography'
 export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pathContext
 
     return (
@@ -24,7 +23,8 @@ export default class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} <br/>
+          {post.timeToRead} minute{post.timeToRead !== 1 && 's'}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -75,6 +75,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

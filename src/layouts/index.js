@@ -1,74 +1,66 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Container } from 'react-responsive-grid'
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography'
 
-class Template extends React.Component {
-  render() {
-    const { location, children } = this.props
-    let header
+const ListLink = ({to, children}) => (
+  <li style={{ display: 'inline-block', marginLeft: '1rem' }}>
+    <Link to={to}>
+      {children}
+    </Link>
+  </li>
+)
 
-    let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
+const SiteTitle = ({title}) => (
+  <Link to="/" style={{
+    textShadow: 'none',
+    backgroundImage: 'none',
+  }}>
+    <h1 style={{ display: 'inline' }}>
+      {title}
+    </h1>
+  </Link>
+)
+
+const SiteHeader = ({title}) => (
+  <header
+    style={{ marginTop: 0, marginBottom: '1.5rem' }}>
+    <ul style={{
+      margin: 0,
+      listStyle: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+    }}>
+      <li style={{marginRight: 'auto'}}>
+        <SiteTitle title={title} />
+      </li>
+      <ListLink to="/archives">Archives</ListLink>
+      <ListLink to="/about">About</ListLink>
+      <ListLink to="/contact">Contact</ListLink>
+    </ul>
+  </header>
+)
+
+export default ({children, data}) => (
+  <div
+    style={{
+      maxWidth: rhythm(24),
+      margin: `${rhythm(1.5)} auto`,
+      padding: `0 ${rhythm(1)} ${rhythm(0.5)} ${rhythm(1)}`,
+    }}
+  >
+    <SiteHeader title={data.site.siteMetadata.title} />
+    {children()}
+  </div>
+)
+
+export const query = graphql`
+  query AboutQuery {
+    site {
+      siteMetadata {
+        title
+      }
     }
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Gatsby Starter Blog
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Gatsby Starter Blog
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <Container
-        style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children()}
-      </Container>
-    )
   }
-}
-
-export default Template
+`

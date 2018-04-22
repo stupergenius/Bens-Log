@@ -17,6 +17,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   fields {
                     slug
+                    url
                   }
                   frontmatter {
                     title
@@ -40,10 +41,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           const next = index === 0 ? null : posts[index - 1].node;
 
           createPage({
-            path: post.node.fields.slug,
+            path: post.node.fields.url,
             component: blogPost,
             context: {
-              slug: post.node.fields.slug,
+              ...post.node.fields,
               previous,
               next,
             },
@@ -58,11 +59,31 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const slug = '/' + slugify(node.frontmatter.title)
+    const url = slug + '.html'
+    
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: 'slug',
+      value: slug,
+    })
+    
+    createNodeField({
+      node,
+      name: 'url',
+      value: url,
     })
   }
+}
+
+function slugify(title) {
+  // This is a lodash impl of pelican's `slugify` method:
+  // https://github.com/getpelican/pelican/blob/5ca1cabe78b9a67b56fdb7197861861ecc83fdec/pelican/utils.py#L266
+  return _.chain(title)
+    .toLower()
+    .deburr()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/[-\s]+/g, '-')
+    .value()
 }
