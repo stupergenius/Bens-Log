@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
+import style from './index.module.css'
 import { rhythm } from '../utils/typography'
 
 const ListLink = ({to, children}) => (
@@ -25,19 +25,15 @@ const SiteTitle = ({title}) => (
 const SiteHeader = ({title}) => (
   <header
     style={{ marginTop: 0, marginBottom: '1.5rem' }}>
-    <ul style={{
-      margin: 0,
-      listStyle: 'none',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-    }}>
+    <ul className={style.navigation}>
       <li style={{marginRight: 'auto'}}>
         <SiteTitle title={title} />
       </li>
-      <ListLink to="/archives">Archives</ListLink>
-      <ListLink to="/about">About</ListLink>
-      <ListLink to="/contact">Contact</ListLink>
+      <ul className={style.navigation}>
+        <ListLink to="/archives">Archives</ListLink>
+        <ListLink to="/about">About</ListLink>
+        <ListLink to="/contact">Contact</ListLink>
+      </ul>
     </ul>
   </header>
 )

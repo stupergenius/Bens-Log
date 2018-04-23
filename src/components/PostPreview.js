@@ -4,29 +4,48 @@ import { rhythm } from '../utils/typography'
 
 export default (props) => {
   return (
-    <div className='post-preview'>
-      <h3
-        style={{
-          marginBottom: rhythm(1 / 4),
-        }}
-      >
+    <div>
+      <h3 style={{ marginBottom: rhythm(1 / 8) }}>
         <Link style={{ boxShadow: 'none' }} to={props.url}>
           {props.title}
         </Link>
       </h3>
-      <small>{props.date}</small><br/>7
-      <TagList tags={props.tags} />
-      <small>{props.category}</small>
+      <PostMeta date={props.date} tags={props.tags} />
       
-      <p dangerouslySetInnerHTML={{__html: props.excerpt}} />
+      <p
+        style={{
+          marginTop: rhythm(1 / 4),
+        }}
+        dangerouslySetInnerHTML={{__html: props.excerpt}}
+      />
     </div>
   )
 }
 
-function TagList({tags}) {
+const PostMeta = ({date, tags}) => {
+  const tagList = tags.split(',').map(tag => tag.trim())
+  
+  return (
+    <div style={{
+      display: 'flex',
+      justifyContent: 'flex-end',
+    }}>
+      <small style={{ marginRight: 'auto' }}>{date}</small>
+      {tagList.map(tag => (
+        <TagLink key={tag} tag={tag} />
+      ))}
+    </div>
+  )
+}
+
+const TagLink = ({tag}) => {
   return (
     <small>
-      
+      #
+      <Link to={`/tags/${encodeURIComponent(tag)}`}>
+        {tag.toLowerCase()}
+      </Link>
+      &nbsp;
     </small>
   )
 }
