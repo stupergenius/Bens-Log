@@ -45,7 +45,7 @@ export default class BlogPostTemplate extends React.Component {
         >
           {previous && (
             <li>
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.fields.url} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             </li>
@@ -53,7 +53,7 @@ export default class BlogPostTemplate extends React.Component {
 
           {next && (
             <li>
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.url} rel="next">
                 {next.frontmatter.title} →
               </Link>
             </li>

@@ -22,7 +22,7 @@ export default class BlogIndex extends React.Component {
               url={node.fields.url}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
-              tags={node.frontmatter.tags}
+              tags={node.fields.tags}
               category={node.frontmatter.category}
               excerpt={node.excerpt}
             />
@@ -48,11 +48,14 @@ export const pageQuery = graphql`
           fields {
             slug
             url
+            tags {
+              name
+              url
+            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            tags
             category
           }
         }
