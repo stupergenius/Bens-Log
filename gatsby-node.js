@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+import { collectTags } from '../utils/tags'
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
@@ -114,13 +115,6 @@ function createTagPages(createPage, template, posts) {
   }
 }
 
-function collectTags(posts) {
-  let allTags = posts.map(post => post.node.fields.tags)
-  return _.uniqWith(_.flatten(allTags), (a, b) => {
-    return a.url === b.url
-  })
-}
-
 function slugify(title) {
   // This is a lodash impl of pelican's `slugify` method:
   // https://github.com/getpelican/pelican/blob/5ca1cabe78b9a67b56fdb7197861861ecc83fdec/pelican/utils.py#L266
@@ -140,7 +134,7 @@ function createTagList(tags) {
   return tags.split(',').map(tag => {
     tag = tag.trim()
     return {
-      url: `/tag/${encodeURIComponent(tag)}/`,
+      url: `/tag/${slugify(tag)}/`,
       name: tag,
     }
   })

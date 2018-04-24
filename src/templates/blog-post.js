@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
+import PostMeta from '../components/PostMeta'
 import Bio from '../components/Bio'
 import { rhythm, scale } from '../utils/typography'
 
@@ -15,17 +16,10 @@ export default class BlogPostTemplate extends React.Component {
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date} <br/>
-          {post.timeToRead} minute{post.timeToRead !== 1 && 's'}
-        </p>
+        <PostMeta
+          date={post.frontmatter.date}
+          tags={post.fields.tags}
+          timeToRead={post.timeToRead} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -76,6 +70,12 @@ export const pageQuery = graphql`
       id
       html
       timeToRead
+      fields {
+        tags {
+          name
+          url
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
