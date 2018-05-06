@@ -63,7 +63,7 @@ So, I'm 100% for developers learning more design concepts. 👩‍🎨
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S59b-XFsyY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-I've seen various tutorials and videos on building apps with [Flutter](https://flutter.io), but most of them fall prey to the common trap in tutorials of building trivial "To Do" or single screen apps. However, [Brian Voong](https://twitter.com/buildthatapp) does what he does best, and builds a real app world app with Flutter!
+I've seen various tutorials and videos on building apps with [Flutter](https://flutter.io), but most of them fall prey to the common trap in tutorials of building trivial "To Do" or single screen apps. However, [Brian Voong](https://twitter.com/buildthatapp) does what he does best, and builds a real world app!
 
 Flutter looks like exciting tech, but it seems still a bit early in its lifecycle (just recently out of alpha) to put any more effort into than a quick POC or throwaway app. To me, the success of Flutter depends heavily on Google's move towards a platform other than the existing Android SDK to build apps, and that knowledge is likely not going to leave the Googleplex until Google's good and ready.
 
