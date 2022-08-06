@@ -1,13 +1,11 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import { rhythm } from '../utils/typography'
+import { graphql } from 'gatsby'
 import PostPreview from '../components/PostPreview'
 
 export default ({data, pathContext}) => {
-  const posts = data.allMarkdownRemark.edges
+  const posts = []//data.allMarkdownRemark.edges
   console.log(posts)
-  
+
   return (
     <div>
       <h2 style={{
@@ -30,31 +28,31 @@ export default ({data, pathContext}) => {
   )
 }
 
-export const pageQuery = graphql`
-  query TagPage($tag: String!) {
-    allMarkdownRemark(
-      limit: 1000,
-      sort: {fields: [frontmatter___date], order: DESC},
-      filter: {fields: {tagList: {in: [$tag]}}}) {
-      edges {
-        node {
-          id
-          excerpt
-          fields {
-            slug
-            url
-            tags {
-              name
-              url
-            }
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            category
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query TagPage($tag: String!) {
+//     allMarkdownRemark(
+//       limit: 1000,
+//       sort: {fields: [frontmatter___date], order: DESC},
+//       filter: {fields: {tagList: {in: [$tag]}}}) {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           fields {
+//             slug
+//             url
+//             tags {
+//               name
+//               url
+//             }
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             title
+//             category
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

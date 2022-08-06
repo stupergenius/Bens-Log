@@ -1,7 +1,9 @@
 ---
 category: Development
 date: 2011-09-11
-tags: 'pelican, s3'
+tags:
+  - pelican
+  - s3
 title: s3cmd, Pelican, and You
 ---
 

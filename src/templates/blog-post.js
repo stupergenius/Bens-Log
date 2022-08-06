@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 
 import PostMeta from '../components/PostMeta'
 import Bio from '../components/Bio'
@@ -58,27 +59,38 @@ export default class BlogPostTemplate extends React.Component {
   }
 }
 
+// export const pageQuery = graphql`
+//   query BlogPostBySlug($slug: String!) {
+//     site {
+//       siteMetadata {
+//         title
+//         author
+//       }
+//     }
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       id
+//       html
+//       timeToRead
+//       fields {
+//         tags {
+//           name
+//           url
+//         }
+//       }
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//       }
+//     }
+//   }
+// `
+
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug {
     site {
       siteMetadata {
         title
         author
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      timeToRead
-      fields {
-        tags {
-          name
-          url
-        }
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

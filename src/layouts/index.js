@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import style from './index.module.css'
 import { rhythm } from '../utils/typography'
 
@@ -46,17 +47,18 @@ export default ({children, data}) => (
       padding: `0 ${rhythm(1)} ${rhythm(0.5)} ${rhythm(1)}`,
     }}
   >
-    <SiteHeader title={data.site.siteMetadata.title} />
+    {/* <SiteHeader title={data.site.siteMetadata.title} /> */}
+    <SiteHeader title="The Thing" />
     {children()}
   </div>
 )
 
-export const query = graphql`
-  query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query AboutQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `

@@ -2,7 +2,10 @@
 author: Ben Snider
 category: Open Source Swift
 date: 2015-10-24
-tags: 'swift, ios, meta'
+tags:
+  - swift
+  - ios
+  - meta
 title: Refocusing On Open Source Swift
 ---
 
