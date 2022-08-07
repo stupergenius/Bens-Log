@@ -85,13 +85,13 @@ export default class BlogPostTemplate extends React.Component {
 //   }
 // `
 
-export const pageQuery = graphql`
-  query BlogPostBySlug {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query BlogPostBySlug {
+//     site {
+//       siteMetadata {
+//         title
+//         author
+//       }
+//     }
+//   }
+// `

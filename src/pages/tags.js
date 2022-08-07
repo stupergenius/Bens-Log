@@ -1,10 +1,10 @@
 import React from "react";
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
+import { StaticQuery, graphql } from "gatsby"
 import { collectTags } from '../utils/tags'
 import { rhythm } from '../utils/typography'
 
-export default ({data}) => {
+const Tags = ({data}) => {
   const posts = []//data.allMarkdownRemark.edges
   const tags = collectTags(posts)
 
@@ -21,6 +21,8 @@ export default ({data}) => {
     </div>
   )
 }
+
+export default Tags
 
 // export const tagQuery = graphql`
 //   query TagQuery {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
-import style from './index.module.css'
+import { StaticQuery, graphql } from "gatsby"
+import * as style from './PrimaryLayout.module.css'
 import { rhythm } from '../utils/typography'
 
 const ListLink = ({to, children}) => (
@@ -39,26 +39,30 @@ const SiteHeader = ({title}) => (
   </header>
 )
 
-export default ({children, data}) => (
-  <div
-    style={{
-      maxWidth: rhythm(24),
-      margin: `${rhythm(1.5)} auto`,
-      padding: `0 ${rhythm(1)} ${rhythm(0.5)} ${rhythm(1)}`,
-    }}
-  >
-    {/* <SiteHeader title={data.site.siteMetadata.title} /> */}
-    <SiteHeader title="The Thing" />
-    {children()}
-  </div>
+const PrimaryLayout = ({children}) => (
+  <StaticQuery
+    query={graphql`
+      query HeadingQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div
+        style={{
+          maxWidth: rhythm(24),
+          margin: `${rhythm(1.5)} auto`,
+          padding: `0 ${rhythm(1)} ${rhythm(0.5)} ${rhythm(1)}`,
+        }}
+      >
+        <SiteHeader title={data.site.siteMetadata.title} />
+        {children}
+      </div>
+    )}
+  />
 )
 
-// export const query = graphql`
-//   query AboutQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
+export default PrimaryLayout

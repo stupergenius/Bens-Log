@@ -1,10 +1,10 @@
 import React from "react"
 import { rhythm } from '../utils/typography'
 
-export default () => (
+const Contact = () => (
   <div>
     <h2>Contact</h2>
-    
+
     <p>Feel free to get at me at one of the following sites::</p>
     <ul>
       <CI><a href="https://twitter.com/benatbensnider">Twitter</a></CI>
@@ -21,3 +21,5 @@ const CI = ({children}) => (
     {children}
   </li>
 )
+
+export default Contact

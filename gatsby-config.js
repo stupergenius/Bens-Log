@@ -8,7 +8,7 @@ module.exports = {
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/icon.jpg"
     }
   }, "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
@@ -22,13 +22,17 @@ module.exports = {
     options: {
       "name": "pages",
       "path": "./src/pages/"
-    },
-    __key: "markdown-pages"
+    }
   }, {
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${__dirname}/entries_test`,
-      name: 'pages',
+      name: 'posts',
+    },
+  }, {
+    resolve: `gatsby-plugin-layout`,
+    options: {
+      component: require.resolve(`./src/components/PrimaryLayout.js`),
     },
   }]
 };

@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import { rhythm } from '../utils/typography'
 import ProfilePic from '../components/ProfilePic'
 
-export default () => (
+const About = () => (
   <div>
     <h2>About</h2>
     <div style={{ display: 'flex' }}>
@@ -13,3 +13,5 @@ export default () => (
     <p>I'm not currently looking for work, but I always <Link to="/contact">welcome connections</Link>.</p>
   </div>
 )
+
+export default About
