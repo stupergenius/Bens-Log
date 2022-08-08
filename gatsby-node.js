@@ -3,52 +3,45 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-// exports.createPages = ({ graphql, actions  }) => {
-//   const { createPage } = actions
+exports.createPages = ({ graphql, actions  }) => {
+  const { createPage } = actions
+  const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
+  const tagTemplate = path.resolve('./src/templates/tag.js')
 
-//   return new Promise((resolve, reject) => {
-//     const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
-//     const tagTemplate = path.resolve('./src/templates/tag.js')
+  return graphql(`
+    query AllPosts {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+        edges {
+          node {
+            fields {
+              slug
+              url
+              tags {
+                name
+                url
+              }
+            }
+            frontmatter {
+              title
+              tags
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
 
-//     resolve(
-//       graphql(
-//         `
-//           {
-//             allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
-//               edges {
-//                 node {
-//                   fields {
-//                     slug
-//                     url
-//                     tags {
-//                       name
-//                       url
-//                     }
-//                   }
-//                   frontmatter {
-//                     title
-//                     tags
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         `
-//       ).then(result => {
-//         if (result.errors) {
-//           reject(result.errors)
-//         }
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges
+    createPostPages(createPage, blogPostTemplate, posts)
 
-//         // Create blog posts pages.
-//         const posts = result.data.allMarkdownRemark.edges
-//         createPostPages(createPage, blogPostTemplate, posts)
-
-//         // Create tag pages.
-//         createTagPages(createPage, tagTemplate, posts)
-//       })
-//     )
-//   })
-// }
+    // Create tag pages.
+    createTagPages(createPage, tagTemplate, posts)
+  })
+}
 
 exports.onCreateNode = ({ node, actions , getNode }) => {
   const { createNodeField } = actions
@@ -88,12 +81,13 @@ function createPostPages(createPage, template, posts) {
   _.each(posts, (post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
+    const fields = post.node.fields
 
     createPage({
-      path: post.node.fields.url,
+      path: fields.url,
       component: template,
       context: {
-        ...post.node.fields,
+        ...fields,
         previous,
         next,
       },
@@ -110,15 +104,13 @@ function collectTags(posts) {
 
 function createTagPages(createPage, template, posts) {
   const uniqueTags = collectTags(posts)
-  for (let tag of uniqueTags) {
+  _.each(uniqueTags, tag => {
     createPage({
       path: tag.url,
       component: template,
-      context: {
-        tag: tag.name
-      },
+      context: { tag: tag.name },
     })
-  }
+  })
 }
 
 function slugify(title) {
@@ -136,14 +128,14 @@ function slugify(title) {
 function createTagList(tags) {
   if (!tags) return []
 
-  const tagList = Array.isArray(node.frontmatter.tags)
-    ? node.frontmatter.tags
+  const tagList = Array.isArray(tags)
+    ? tags
     : tags.trim().split(',')
 
   return tagList.map(tag => {
     tag = tag.trim()
     return {
-      url: `/tag/${slugify(tag)}/`,
+      url: `/tags/${slugify(tag)}/`,
       name: tag,
     }
   })

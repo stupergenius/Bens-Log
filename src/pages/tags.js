@@ -5,7 +5,7 @@ import { collectTags } from '../utils/tags'
 import { rhythm } from '../utils/typography'
 
 const Tags = ({data}) => {
-  const posts = []//data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges
   const tags = collectTags(posts)
 
   return (
@@ -24,20 +24,20 @@ const Tags = ({data}) => {
 
 export default Tags
 
-// export const tagQuery = graphql`
-//   query TagQuery {
-//     allMarkdownRemark {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             tags {
-//               url
-//               name
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const tagQuery = graphql`
+  query TagQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            tags {
+              url
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`

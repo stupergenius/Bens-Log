@@ -12,7 +12,7 @@ export default class Archives extends React.Component {
   }
 
   groups() {
-    const posts = []//this.props.data
+    const posts = this.props.data
     let grouped = posts.allMarkdownRemark.edges.reduce((groups, {node}) => {
       const groupKey = this.groupKey(node.frontmatter.date)
 
@@ -61,22 +61,22 @@ const ArchiveGroup = ({title, posts}) => {
   )
 }
 
-// export const archiveQuery = graphql`
-//   query ArchiveQuery {
-//     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             slug
-//             url
-//           }
-//           frontmatter {
-//             date
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const archiveQuery = graphql`
+  query ArchiveQuery {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+            url
+          }
+          frontmatter {
+            date
+            title
+          }
+        }
+      }
+    }
+  }
+`

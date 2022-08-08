@@ -10,7 +10,7 @@ export default ({date, tags}) => {
     }}>
       <small style={{ marginRight: 'auto' }}>{date}</small>
       {tags.map(tag => (
-        <TagLink key={tag} tag={tag} />
+        <TagLink key={tag.url} tag={tag} />
       ))}
     </div>
   )
@@ -20,8 +20,8 @@ const TagLink = ({tag}) => {
   return (
     <small>
       #
-      <Link to={`/tags/${tag}`}>
-        {tag}
+      <Link to={tag.url}>
+        {tag.name}
       </Link>
       &nbsp;
     </small>

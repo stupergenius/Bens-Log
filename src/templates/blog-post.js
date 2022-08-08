@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
@@ -11,16 +10,14 @@ export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pathContext
+    const { previous, next } = this.props.pageContext
 
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
         <PostMeta
           date={post.frontmatter.date}
-          tags={post.fields.tags}
-          timeToRead={post.timeToRead} />
+          tags={post.fields.tags} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -59,31 +56,36 @@ export default class BlogPostTemplate extends React.Component {
   }
 }
 
-// export const pageQuery = graphql`
-//   query BlogPostBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//         author
-//       }
-//     }
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       html
-//       timeToRead
-//       fields {
-//         tags {
-//           name
-//           url
-//         }
-//       }
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//       }
-//     }
-//   }
-// `
+export function Head({ data }) {
+  return (
+    <title>{`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.siteTitle}`}</title>
+  )
+}
+
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      html
+      fields {
+        tags {
+          name
+          url
+        }
+      }
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+      }
+    }
+  }
+`
 
 // export const pageQuery = graphql`
 //   query BlogPostBySlug {

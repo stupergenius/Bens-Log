@@ -17,12 +17,7 @@ export default class BlogIndex extends React.Component {
           return node && (
             <PostPreview
               key={node.id}
-              url={`/posts/${node.id}`}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              tags={node.frontmatter.tags}
-              category={node.frontmatter.category}
-              excerpt={node.excerpt}
+              post={node}
             />
           )
         })}
@@ -50,9 +45,16 @@ export const pageQuery = graphql`
         excerpt
         frontmatter {
           title
-          category
           date(formatString: "MMMM DD, YYYY")
-          tags
+        }
+        fields {
+          slug
+          url
+          tagList
+          tags {
+            name
+            url
+          }
         }
       }
     }
