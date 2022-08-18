@@ -61,6 +61,12 @@ const ArchiveGroup = ({title, posts}) => {
   )
 }
 
+export function Head({ data }) {
+  return (
+    <title>{`Archives | ${data.site.siteMetadata.title}`}</title>
+  )
+}
+
 export const archiveQuery = graphql`
   query ArchiveQuery {
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
@@ -76,6 +82,11 @@ export const archiveQuery = graphql`
             title
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

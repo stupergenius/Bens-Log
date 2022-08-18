@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react'
+import { graphql } from 'gatsby'
 import { rhythm } from '../utils/typography'
 
 const Contact = () => (
@@ -23,3 +24,19 @@ const CI = ({children}) => (
 )
 
 export default Contact
+
+export function Head({ data }) {
+  return (
+    <title>{`Contact | ${data.site.siteMetadata.title}`}</title>
+  )
+}
+
+export const pageQuery = graphql`
+  query ContactQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

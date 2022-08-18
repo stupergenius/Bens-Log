@@ -58,7 +58,7 @@ export default class BlogPostTemplate extends React.Component {
 
 export function Head({ data }) {
   return (
-    <title>{`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.siteTitle}`}</title>
+    <title>{`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
   )
 }
 
