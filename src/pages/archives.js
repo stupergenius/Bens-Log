@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'gatsby-link'
+import { HeadMeta } from '../components/HeadMeta'
 import { graphql } from 'gatsby'
 
 export default class Archives extends React.Component {
@@ -27,14 +28,12 @@ export default class Archives extends React.Component {
 
   render() {
     const groups = this.groups()
-    console.log(groups)
 
     return (
       <div>
         <h2>Archives</h2>
 
         {Object.entries(groups).map(([key, value]) => {
-          console.log(key, value)
           return <ArchiveGroup key={key} title={key} posts={value} />
         })}
       </div>
@@ -43,8 +42,6 @@ export default class Archives extends React.Component {
 }
 
 const ArchiveGroup = ({title, posts}) => {
-  console.log(title, posts)
-
   return (
     <div>
       <h4>{title}</h4>
@@ -61,10 +58,8 @@ const ArchiveGroup = ({title, posts}) => {
   )
 }
 
-export function Head({ data }) {
-  return (
-    <title>{`Archives | ${data.site.siteMetadata.title}`}</title>
-  )
+export function Head() {
+  return <HeadMeta pageTitle="The Archives" />
 }
 
 export const archiveQuery = graphql`
@@ -82,11 +77,6 @@ export const archiveQuery = graphql`
             title
           }
         }
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
   }

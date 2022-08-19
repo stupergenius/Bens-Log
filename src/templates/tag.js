@@ -4,8 +4,6 @@ import PostPreview from '../components/PostPreview'
 
 const Tag = ({data, pageContext}) => {
   const posts = data.allMarkdownRemark.edges
-  console.log(posts)
-  console.log(pageContext)
 
   return (
     <div>

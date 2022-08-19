@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
+import { HeadMeta } from '../components/HeadMeta'
 import { rhythm } from '../utils/typography'
 import ProfilePic from '../components/ProfilePic'
 
@@ -17,18 +18,6 @@ const About = () => (
 
 export default About
 
-export function Head({ data }) {
-  return (
-    <title>{`About Me | ${data.site.siteMetadata.title}`}</title>
-  )
+export function Head() {
+  return <HeadMeta pageTitle="About Me" />
 }
-
-export const pageQuery = graphql`
-  query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

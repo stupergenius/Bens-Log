@@ -1,7 +1,8 @@
 import React from "react";
 import Link from 'gatsby-link'
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { collectTags } from '../utils/tags'
+import { HeadMeta } from '../components/HeadMeta'
 import { rhythm } from '../utils/typography'
 
 const Tags = ({data}) => {
@@ -23,6 +24,10 @@ const Tags = ({data}) => {
 }
 
 export default Tags
+
+export function Head() {
+  return <HeadMeta pageTitle="Tags" />
+}
 
 export const tagQuery = graphql`
   query TagQuery {

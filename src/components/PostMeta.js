@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { rhythm } from '../utils/typography'
 
 export default ({date, tags}) => {
   return (

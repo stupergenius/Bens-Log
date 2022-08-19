@@ -3,7 +3,9 @@ module.exports = {
     title: `Bens Log`,
     author: `BenS`,
     siteUrl: `https://www.bensnider.com`,
+    image: `https://www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=240`,
     description: "This is where I write my thoughts.",
+    twitterUsername: "@benatbensnider",
   },
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',

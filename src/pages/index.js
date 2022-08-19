@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import { HeadMeta } from '../components/HeadMeta'
 import Bio from '../components/Bio'
 import PostPreview from '../components/PostPreview'
 
 export default class BlogIndex extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
     const posts = this.props.data.allMarkdownRemark.nodes
-    console.table(posts)
 
     return (
       <div>
         <Bio />
+
+        <h3 className='posts-item-note' aria-label="Recent Posts">Recent Posts</h3>
         {posts.map(node => {
           return node && (
             <PostPreview
@@ -26,19 +26,12 @@ export default class BlogIndex extends React.Component {
   }
 }
 
-export function Head({ data }) {
-  return (
-    <title>{ data.site.siteMetadata.title }</title>
-  )
-}
+export const Head = ({ data }) => (
+  <HeadMeta />
+)
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         id
@@ -60,13 +53,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
