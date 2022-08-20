@@ -9,7 +9,7 @@
 
 .notransition {
   -webkit-transition: none;
-  -moz-transition: none; 
+  -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
   transition: none;
@@ -237,10 +237,10 @@ a {
     color: $text-link-blue;
   }
 
-  &:focus {
-    outline: 3px solid rgba(0, 54, 199, 0.6);
-    outline-offset: 2px;
-  }
+  // &:focus {
+  //   outline: 3px solid rgba(0, 54, 199, 0.6);
+  //   outline-offset: 2px;
+  // }
 }
 
 // Del

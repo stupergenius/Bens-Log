@@ -96,9 +96,9 @@ body[data-theme="dark"] {
       color: $dark-text-link-blue;
     }
 
-    &:focus {
-      outline-color: rgba(255, 82, 119, 0.6);
-    }
+    // &:focus {
+    //   outline-color: rgba(255, 82, 119, 0.6);
+    // }
   }
 
   // List
@@ -234,7 +234,7 @@ body[data-theme="dark"] {
     .solution:hover {
       color: $dark-text-link-blue-active;
     }
-  }  
+  }
 
   .search-article {
     input[type="search"] {
