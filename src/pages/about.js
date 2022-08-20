@@ -1,6 +1,5 @@
 import React from "react";
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
 import { HeadMeta } from '../components/HeadMeta'
 import { rhythm } from '../utils/typography'
 import ProfilePic from '../components/ProfilePic'

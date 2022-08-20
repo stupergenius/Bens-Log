@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'gatsby-link'
 import '../styles/main.scss'
 import { Navbar } from './Navbar'
+import Footer from './Footer'
 
 const ListLink = ({to, children}) => (
   <li style={{ display: 'inline-block', marginLeft: '1rem' }}>
@@ -39,6 +40,7 @@ const PrimaryLayout = ({children}) => {
       <Navbar menus={menus} onOpen={toggleMenuOpen} />
       <div className={`wrapper ${blurClass}`}>
         {children}
+        <Footer />
       </div>
     </>
   )
