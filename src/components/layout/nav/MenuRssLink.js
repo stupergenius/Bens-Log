@@ -2,7 +2,7 @@ import React from "react"
 
 const MenuRssLink = () => {
   return (
-    <a className="menu-link rss" href="/feed.xml">
+    <a className="menu-link rss" href="/feeds/all.atom.xml">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="17"
