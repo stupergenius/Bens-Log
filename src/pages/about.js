@@ -2,16 +2,20 @@ import React from "react";
 import Link from 'gatsby-link'
 import { HeadMeta } from '../components/HeadMeta'
 import ProfilePic from '../components/ProfilePic'
+import PageHeader from "../components/layout/PageHeader";
+import MainPageContent from "../components/layout/MainPageContent";
 
 const About = () => (
-  <div>
-    <h2>About Me</h2>
-    <div style={{ display: 'flex' }}>
-      <ProfilePic style={{ marginTop: '0.35rem' }} />
-      <p>I'm an iOS developer by trade, and otherwise identify as a husband, cyclist, vegan and nerd. Technology is my life, and mobile technology is where I choose to direct my focus. Mobile technology is how the world interacts, and so being at the forefront of this trend is equal parts challenging and rewarding.</p>
+  <>
+    <PageHeader title="Colophon" />
+    <div className="author" style={{margin: 0}}>
+      <ProfilePic />
     </div>
-    <p>I'm not currently looking for work, but I always <Link to="/contact">welcome connections</Link>.</p>
-  </div>
+    <MainPageContent>
+      <p>I'm an iOS developer by trade, and otherwise identify as a husband, cyclist, vegan and nerd. Technology is my life, and mobile technology is where I choose to direct my focus. Mobile technology is how the world interacts, and so being at the forefront of this trend is equal parts challenging and rewarding.</p>
+      <p>I'm not currently looking for work, but I always <Link to="/contact">welcome connections</Link>.</p>
+    </MainPageContent>
+  </>
 )
 
 export default About

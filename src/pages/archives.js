@@ -32,13 +32,14 @@ export default class Archives extends React.Component {
     const groups = this.groups()
 
     return (
-      <PageHeader title="The Archives">
+      <>
+        <PageHeader title="The Archives" />
         <MainPageContent>
           {Object.entries(groups).map(([key, value]) => {
             return <ArchiveGroup key={key} title={key} posts={value} />
           })}
         </MainPageContent>
-      </PageHeader>
+      </>
     )
   }
 }

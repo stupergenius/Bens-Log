@@ -1,11 +1,18 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { HeadMeta } from '../components/HeadMeta'
+import MainPageContent from '../components/layout/MainPageContent'
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <MainPageContent>
+    <div className="not-found">
+      <div className="container">
+        <div className="title">404</div>
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <Link to="/">Go back home</Link>
+      </div>
+    </div>
+  </MainPageContent>
 )
 
 export function Head() {
