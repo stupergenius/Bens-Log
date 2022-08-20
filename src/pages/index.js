@@ -9,19 +9,20 @@ export default class BlogIndex extends React.Component {
     const posts = this.props.data.allMarkdownRemark.nodes
 
     return (
-      <div>
+      <>
         <Bio />
-
-        <h3 className='posts-item-note' aria-label="Recent Posts">Recent Posts</h3>
-        {posts.map(node => {
-          return node && (
-            <PostPreview
-              key={node.id}
-              post={node}
-            />
-          )
-        })}
-      </div>
+        <main aria-label='Content'>
+          <h3 className='posts-item-note' aria-label="Recent Posts">Recent Posts</h3>
+          {posts.map(node => {
+            return node && (
+              <PostPreview
+                key={node.id}
+                post={node}
+              />
+            )
+          })}
+        </main>
+      </>
     )
   }
 }
