@@ -2,6 +2,8 @@ import React from "react";
 import Link from 'gatsby-link'
 import { HeadMeta } from '../components/HeadMeta'
 import { graphql } from 'gatsby'
+import PageHeader from "../components/layout/PageHeader";
+import MainPageContent from "../components/layout/MainPageContent";
 
 export default class Archives extends React.Component {
 
@@ -30,31 +32,31 @@ export default class Archives extends React.Component {
     const groups = this.groups()
 
     return (
-      <div>
-        <h2>Archives</h2>
-
-        {Object.entries(groups).map(([key, value]) => {
-          return <ArchiveGroup key={key} title={key} posts={value} />
-        })}
-      </div>
+      <PageHeader title="The Archives">
+        <MainPageContent>
+          {Object.entries(groups).map(([key, value]) => {
+            return <ArchiveGroup key={key} title={key} posts={value} />
+          })}
+        </MainPageContent>
+      </PageHeader>
     )
   }
 }
 
 const ArchiveGroup = ({title, posts}) => {
   return (
-    <div>
-      <h4>{title}</h4>
-      <ul>
-        {posts.map((node) => (
-          <li key={node.id}>
+    <>
+      <h2>{title}</h2>
+      {posts.map((node) => (
+        <article key={node.id} className="post-item">
+          <h3 className="post-item-title">
             <Link to={node.fields.url}>
               {node.frontmatter.title}
             </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </h3>
+        </article>
+      ))}
+    </>
   )
 }
 

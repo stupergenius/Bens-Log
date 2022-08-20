@@ -1,6 +1,6 @@
 import React from "react"
 
-const MinPageContent = ({ children }) => {
+const MainPageContent = ({ children }) => {
   return (
     <main className="page-content" aria-label="Content">
       {children}
@@ -8,4 +8,4 @@ const MinPageContent = ({ children }) => {
   )
 }
 
-export default MinPageContent
+export default MainPageContent
