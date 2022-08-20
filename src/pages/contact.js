@@ -1,7 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import { HeadMeta } from '../components/HeadMeta'
-import { rhythm } from '../utils/typography'
 
 const Contact = () => (
   <div>
@@ -19,7 +17,7 @@ const Contact = () => (
 )
 
 const CI = ({children}) => (
-  <li style={{ marginBottom: rhythm(1 / 8) }}>
+  <li style={{ marginBottom: '0.25rem' }}>
     {children}
   </li>
 )

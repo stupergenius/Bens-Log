@@ -1,27 +1,7 @@
 import React, { useState } from 'react'
-import Link from 'gatsby-link'
-import '../styles/main.scss'
+import '../../styles/main.scss'
 import { Navbar } from './Navbar'
 import Footer from './Footer'
-
-const ListLink = ({to, children}) => (
-  <li style={{ display: 'inline-block', marginLeft: '1rem' }}>
-    <Link to={to}>
-      {children}
-    </Link>
-  </li>
-)
-
-const SiteTitle = ({title}) => (
-  <Link to="/" style={{
-    textShadow: 'none',
-    backgroundImage: 'none',
-  }}>
-    <h1 style={{ display: 'inline' }}>
-      {title}
-    </h1>
-  </Link>
-)
 
 const PrimaryLayout = ({children}) => {
   const [isBlurred, setIsBlurred] = useState(false)

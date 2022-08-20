@@ -34,7 +34,7 @@ module.exports = {
   }, {
     resolve: `gatsby-plugin-layout`,
     options: {
-      component: require.resolve(`./src/components/PrimaryLayout.js`),
+      component: require.resolve(`./src/components/layout/PrimaryLayout.js`),
     },
   }]
 };

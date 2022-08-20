@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import { graphql } from "gatsby"
 import { collectTags } from '../utils/tags'
 import { HeadMeta } from '../components/HeadMeta'
-import { rhythm } from '../utils/typography'
 
 const Tags = ({data}) => {
   const posts = data.allMarkdownRemark.edges
@@ -14,7 +13,7 @@ const Tags = ({data}) => {
       <h2>Tags</h2>
       <ul>
         {tags.map(tag => (
-          <li key={tag.url} style={{ marginBottom: rhythm(1 / 8) }}>
+          <li key={tag.url} style={{ marginBottom: '0.125rem' }}>
             <Link to={tag.url}>{tag.name}</Link>
           </li>
         ))}

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 
 import PostMeta from '../components/PostMeta'
 import Bio from '../components/Bio'
-import { rhythm, scale } from '../utils/typography'
 
 export default class BlogPostTemplate extends React.Component {
   render() {
@@ -19,11 +18,7 @@ export default class BlogPostTemplate extends React.Component {
           date={post.frontmatter.date}
           tags={post.fields.tags} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr/>
         <Bio />
 
         <ul

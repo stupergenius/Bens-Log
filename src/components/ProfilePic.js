@@ -1,5 +1,4 @@
 import React from 'react'
-import { rhythm } from '../utils/typography'
 
 export default ({style}) => (
   <img
@@ -7,8 +6,8 @@ export default ({style}) => (
     alt="Ben Snider"
     className="author-avatar"
     style={{
-      width: rhythm(5),
-      height: rhythm(5)
+      width: '6rem',
+      height: '6rem',
     }}
   />
 )

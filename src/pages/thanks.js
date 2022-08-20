@@ -1,6 +1,6 @@
 import React from "react";
 import { HeadMeta } from '../components/HeadMeta'
-import MinPageContent from "../components/MainPageContent";
+import MinPageContent from "../components/layout/MainPageContent";
 
 const Thanks = () => (
   <>
