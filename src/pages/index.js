@@ -27,7 +27,7 @@ export default class BlogIndex extends React.Component {
   }
 }
 
-export const Head = ({ data }) => (
+export const Head = () => (
   <HeadMeta />
 )
 

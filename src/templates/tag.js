@@ -1,24 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PageHeader from '../components/layout/PageHeader'
+import MainPageContent from '../components/layout/MainPageContent'
 import PostPreview from '../components/PostPreview'
 
 const Tag = ({data, pageContext}) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <div>
-      <h2 style={{
-        marginBottom: 0,
-      }}>
-        #{pageContext.tag}
-      </h2>
-      {posts.map(({ node }) => (
-        <PostPreview
-          key={node.id}
-          post={node}
-        />
-      ))}
-    </div>
+    <>
+      <PageHeader title={`Posts tagged with #${pageContext.tag}`} />
+      <MainPageContent>
+        {posts.map(({ node }) => (
+          <PostPreview
+            key={node.id}
+            post={node}
+          />
+        ))}
+      </MainPageContent>
+    </>
   )
 }
 

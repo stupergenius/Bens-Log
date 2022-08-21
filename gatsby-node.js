@@ -88,6 +88,7 @@ function createPostPages(createPage, template, posts) {
       component: template,
       context: {
         ...fields,
+        isPost: true,
         previous,
         next,
       },
@@ -107,6 +108,7 @@ function createTagPages(createPage, template, posts) {
   _.each(uniqueTags, tag => {
     createPage({
       path: tag.url,
+      isTag: true,
       component: template,
       context: { tag: tag.name },
     })

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Bens Log`,
-    author: `BenS`,
+    author: `Benjamin Snider`,
     siteUrl: `https://www.bensnider.com`,
     image: `https://www.gravatar.com/avatar/94a30535d38606170f571898d96b6181?s=240`,
     description: "This is where I write my thoughts.",

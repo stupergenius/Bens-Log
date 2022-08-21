@@ -5,8 +5,8 @@ export const HeadMeta = ({ pageTitle, description, pathname, children }) => {
   const { title, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata()
   const seo = {
     title: pageTitle == null
-    ? title
-    : `${pageTitle} | ${title}`,
+      ? title
+      : `${pageTitle} | ${title}`,
     siteTitle: title,
     description: description || defaultDescription,
     image: `${image}`,

@@ -2,72 +2,52 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
+import PostNavigation from '../components/PostNavigation'
+import MainPageContent from '../components/layout/MainPageContent'
+import { HeadMeta } from '../components/HeadMeta'
 import PostMeta from '../components/PostMeta'
 import Bio from '../components/Bio'
 
-export default class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+const BlogPostTemplate = ({ data, pageContext }) => {
+  const post = data.markdownRemark
+  const { previous, next } = pageContext
 
-    return (
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <PostMeta
-          date={post.frontmatter.date}
-          tags={post.fields.tags} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
+  return (
+    <>
+      <MainPageContent>
+        <article itemScope itemType="https://schema.org/BlogPosting">
+          <PostMeta
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            rawDate={post.frontmatter.rawDate}
+            tags={post.fields.tags}
+            excerpt={post.excerpt} />
+
+          <div className="page-content" itemProp="articleBody"
+            dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          <hr/>
+
+          <PostNavigation next={next} previous={previous} />
+        </article>
         <Bio />
-
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          {previous && (
-            <li>
-              <Link to={previous.fields.url} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            </li>
-          )}
-
-          {next && (
-            <li>
-              <Link to={next.fields.url} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            </li>
-          )}
-        </ul>
-      </div>
-    )
-  }
+      </MainPageContent>
+    </>
+  )
 }
 
+export default BlogPostTemplate
+
 export function Head({ data }) {
-  return (
-    <title>{`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
-  )
+  return <HeadMeta pageTitle={data.markdownRemark.frontmatter.title} />
 }
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       fields {
         tags {
           name
@@ -76,19 +56,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date:date(formatString: "MMMM DD, YYYY")
+        rawDate:date
       }
     }
   }
 `
-
-// export const pageQuery = graphql`
-//   query BlogPostBySlug {
-//     site {
-//       siteMetadata {
-//         title
-//         author
-//       }
-//     }
-//   }
-// `
