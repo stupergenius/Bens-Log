@@ -16,8 +16,7 @@ We currently *do not* have ABI compatibility, and it seems we won't in the near 
 
 [and similarly](http://thread.gmane.org/gmane.comp.lang.swift.evolution/17276/focus=17334)
 
-> We’ll start discussing post-3.0 releases in August.  Until Swift 3 is really wound down, it is almost
-impossible to make forward looking plans.
+> We’ll start discussing post-3.0 releases in August.  Until Swift 3 is really wound down, it is almost impossible to make forward looking plans.
 
 ## ABI Compatibility
 
@@ -59,8 +58,7 @@ And therein lies the rub. Since the different versions of the Swift compiler are
 
 Lattner actually [makes this point rather well](http://thread.gmane.org/gmane.comp.lang.swift.evolution/17276/focus=17334):
 
-> ABI stability starts to matter when you’re interested in combining precompiled libraries built by
-different parties, which are only distributed in binary form.
+> ABI stability starts to matter when you’re interested in combining precompiled libraries built by different parties, which are only distributed in binary form.
 
 What's left unsaid here is libraries that are *not* distributed in binary form - namely, source distributed libraries - will still continue to compile and link as they have in the past. So long as these source distributed libraries are source compatible with the version of Swift that the client developer is using, everything Just Works™. This applies to many thousands of libraries that are distributed via the Swift Package Manager, Carthage, CocoaPods, etc.
 

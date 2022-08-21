@@ -18,7 +18,7 @@ def forname(modname, classname):
 ```
 
 Basically it returns a class object from modname matching classname.
-Sound decptively simple, and it is. If it doesn't find classname in
+Sound deceptively simple, and it is. If it doesn't find classname in
 modname, or it doesn't find modname, it will simply throw an import
 error. What's left to do is just instantiate an object of that class and
 shazam, its magic. Here's an example to create a new Popen instance:

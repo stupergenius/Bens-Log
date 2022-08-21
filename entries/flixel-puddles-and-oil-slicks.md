@@ -59,9 +59,8 @@ package sprites {
            super.update();
        }
    }
+}
 ```
-
-> }
 
 Using this player class, we can see that by modifying the velocityFactor
 instance variable, we can effectively control how fast the player can

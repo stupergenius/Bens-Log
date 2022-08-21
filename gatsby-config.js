@@ -12,7 +12,7 @@ module.exports = {
     options: {
       "icon": "src/images/icon.jpg"
     }
-  }, "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -85,6 +85,28 @@ module.exports = {
           output: "/feeds/all.atom.xml",
           title: "Bens Log",
           match: "^/posts/",
+        },
+      ],
+    },
+  }, {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+            inlineCodeMarker: `›`,
+            aliases: {sh: 'bash'},
+            showLineNumbers: false,
+            noInlineHighlight: false,
+            prompt: {
+              user: "ben",
+              host: "host",
+              global: false,
+            },
+            escapeEntities: {},
+          },
         },
       ],
     },

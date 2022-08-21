@@ -33,30 +33,6 @@ export const HeadMeta = ({ pageTitle, description, pathname, children }) => {
       <meta name="apple-mobile-web-app-title" content={seo.siteTitle} />
       <meta name="theme-color" content="#2c2c2c" />
 
-      <script type="application/javascript">{`
-        function initTheme(state) {
-          var body = document.body;
-          var data = body.getAttribute("data-theme");
-
-          if (state === "dark") {
-            body.setAttribute("data-theme", "dark");
-          } else if (state === "light") {
-            body.removeAttribute("data-theme");
-          } else {
-            localStorage.setItem("theme", data);
-          }
-        }
-
-        if (document.readyState !== "loading") {
-          initTheme(localStorage.getItem("theme"));
-        } else {
-          document.addEventListener("DOMContentLoaded", function(event) {
-            initTheme(localStorage.getItem("theme"));
-          });
-        }
-      `}
-      </script>
-
       {children}
     </>
   )
