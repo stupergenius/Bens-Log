@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2009-02-12 20:56'
+date: 2009-02-12 20:56
 tags: 'Flex, Actionscript, Testing'
 title: Flexunit Asyncrhonous Setups
 ---
@@ -31,7 +31,7 @@ asserts, and the class of the data that should be loaded. Instead of a
 jumble of words explaining this it would probably help more to just
 paste the code at this point.
 
-``` {.sourceCode .actionscript}
+```actionscript
 package {
     import flash.events.Event;
     import flash.net.URLLoader;
@@ -72,7 +72,7 @@ from other tests is to a) not be prefixed with test and b) use the data
 property to access the loaded data from the setup. An example test case
 demonstrating this follows:
 
-``` {.sourceCode .actionscript}
+```actionscript
 public function testMethod():void {
     this.setupAsync('something.xml', this.doTestMethod, XML);
 }

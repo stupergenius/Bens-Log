@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2009-08-19 20:29'
+date: 2009-08-19 20:29
 tags: 'Flash, Flex'
 title: Flash 10 Valid Vector Elements
 ---
@@ -23,7 +23,7 @@ fired up my shiny new Flash CS4 and gave it a try. And indeed, my
 suspicion was correct. The following simple code below validates my
 hypothesis.
 
-``` {.sourceCode .actionscript}
+```actionscript
 var test:Vector.<Sprite> = new Vector.<Sprite>();
 test.push(new Sprite(), new MovieClip());
 

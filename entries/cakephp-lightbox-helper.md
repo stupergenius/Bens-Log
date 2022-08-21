@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-07-22 13:24'
+date: 2008-07-22 13:24
 tags: CakePHP
 title: CakePHP Lightbox Helper
 ---
@@ -9,7 +9,7 @@ Made a helper to output lightbox compatible links, since the core HTML
 helper was not working. Stick the following code in
 app/view/helpers/lightbox.php:
 
-``` {.sourceCode .php}
+```php
 class LightboxHelper extends AppHelper {
 
     var $helpers = array('Html');
@@ -30,6 +30,6 @@ class LightboxHelper extends AppHelper {
 Then you can use it from your views, after including it in your
 controller's \$helpers array, like the following:
 
-``` {.sourceCode .php}
+```php
 echo $lightbox->img('somethumb.jpg', 'somefullimage.jpg');
 ```

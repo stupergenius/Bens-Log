@@ -1,6 +1,6 @@
 ---
 category: Fun
-date: '2009-09-28 14:09'
+date: 2009-09-28 14:09
 tags: nerdy
 title: This Is Not a |
 ---

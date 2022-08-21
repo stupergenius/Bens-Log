@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-01-18 17:46'
+date: 2010-01-18 17:46
 tags: 'Actionscript, Flash, Flex'
 title: Flixel Puddles and Oil Slicks
 ---
@@ -20,7 +20,7 @@ direction they are traveling. Here I will cover how I solved speeding up
 and slowing down the player when he crosses over such an obstacle. Below
 is a skeleton of my main player class:
 
-``` {.sourceCode .actionscript}
+```actionscript
 package sprites {
    import org.flixel.FlxG;
    import org.flixel.FlxSprite;
@@ -74,7 +74,7 @@ an oil slick. We also need sprites that define how they should change
 the player movement when they are stepped over. Below is a skeleton of
 one of my obstacle classes:
 
-``` {.sourceCode .actionscript}
+```actionscript
 package sprites.obstacles {
     import org.flixel.FlxG;
     import org.flixel.FlxSprite;
@@ -100,7 +100,7 @@ define that this sprite, when stepped over, speeds up the player by a
 factor of 2. Below are the relevant parts of the update() method in my
 main PlayState class.
 
-``` {.sourceCode .actionscript}
+```actionscript
 this._player.velocityFactor = 1;
 for each (sprite in this._obstacles) {
     if (this._player.overlaps(sprite)) {

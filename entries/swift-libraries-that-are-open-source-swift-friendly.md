@@ -1,8 +1,10 @@
-Title: Swift Libraries That Are Open Source Swift Friendly
-Date: 2015-12-02 18:08
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, libraries
+---
+title: Swift Libraries That Are Open Source Swift Friendly
+date: 2015-12-02 18:08
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, libraries
+---
 
 On the road to open source Swift, some enterprising developers have jumped ahead and started writing libraries, scripts, and apps with an open source Swift in mind. Given a long head start from the Apple announcement to the (alleged) end of year release, these developers have put a significant amount of effort into projects they hope will be useful to the open source Swift community. In this post I'll highlight some of these projects, how they plan to support a non Apple environment, why they're useful, and how to make use of them today in your apps and scripts.
 

@@ -1,6 +1,6 @@
 ---
 category: Arduino
-date: '2012-02-06 22:31'
+date: 2012-02-06 22:31
 tags: 'arduino, hardware, technology'
 title: PiSeg Arduino Project
 ---

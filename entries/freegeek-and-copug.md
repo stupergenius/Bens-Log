@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2011-09-27 22:07'
+date: 2011-09-27 22:07
 tags: 'linux, volunteering, hardware, python'
 title: COhPUG Monthly Meetup and FreeGeek
 ---

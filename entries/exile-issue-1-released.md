@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-04-27 22:22'
+date: 2010-04-27 22:22
 tags: 'Comics, Exile, Exile Issue 1, Game Dev, Games, Actionscript, Flash, Flex'
 title: Exile Issue 1 Released
 ---

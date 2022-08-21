@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-02-17 19:13'
+date: 2008-02-17 19:13
 tags: Python
 title: Python Lies
 ---
@@ -11,7 +11,7 @@ lie. Say we want to do some math in Python. Say we want to raise large
 numbers to large numbers. Say those numbers are 324 and 324. Then we
 would do something like:
 
-``` {.sourceCode .python}
+```python
 <<< 324**324
 ```
 
@@ -20,7 +20,7 @@ know if this is right or wrong though? Say we use long doubles in C++ to
 determine the results of this same operation. Then we would do something
 like:
 
-``` {.sourceCode .python}
+```python
 long double k = 324;
 for (int i=0; i<324; ++i) {
     k *= k
@@ -33,7 +33,7 @@ compiler and machine can represent and find that it is roughly equal to
 1.2e+4932. We then check in python if this number is greater than
 324\^324 by doing something like:
 
-``` {.sourceCode .python}
+```python
 >>>> (12**4932) > (324**324)
 True
 ```

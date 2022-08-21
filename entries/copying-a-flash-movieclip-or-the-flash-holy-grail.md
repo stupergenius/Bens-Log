@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2009-05-15 19:41'
+date: 2009-05-15 19:41
 tags: 'Actionscript, C/C++, Flash, Flex'
 title: 'Copying a Flash MovieClip, or The Flash Holy Grail'
 ---
@@ -23,7 +23,7 @@ I will need to get the whole shebang. It's pretty handy in general. So
 my version follows (as a bonus I include my handy-dandy clearAllChildren
 function):
 
-``` {.sourceCode .actionscript}
+```actionscript
 package com.bmm.utils {
   import flash.display.DisplayObject;
   import flash.display.DisplayObjectContainer;

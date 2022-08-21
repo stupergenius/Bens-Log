@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2009-01-30 15:08'
+date: 2009-01-30 15:08
 tags: 'Actionscript, Flex'
 title: Flex MenuItem Actions
 ---
@@ -9,7 +9,7 @@ So, gonna write this here because I will forget how to do it.
 Essentially, this approach eliminates the need to conditionally branch
 on menu item properties. Before we would do something like:
 
-``` {.sourceCode .actionscript}
+```actionscript
 private function menuHandler(event:MouseEvent):void {
     if (event.item.@label == 'Save') {
         f = File.destopDirectory;
@@ -40,7 +40,7 @@ the
 method to actually call the returned Function. So our revised menu item
 XML would look something like:
 
-``` {.sourceCode .xml}
+```xml
 <!-- menu items -->
 <mx:XMLList>
     <menuitem label="Save" action="saveMenuHandler"/>
@@ -50,7 +50,7 @@ XML would look something like:
 
 And our handler would look like:
 
-``` {.sourceCode .actionscript}
+```actionscript
 // AS handler
 private function menuHandler(event:MouseEvent):void {
     var method:String = String(event.item.@action);

@@ -1,8 +1,10 @@
-Title: ABI Compatibility: Whoopdty Do, What Does It All Mean?
-Date: 2016-05-19 22:48
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli
+---
+title: "ABI Compatibility: Whoopdty Do, What Does It All Mean?"
+date: 2016-05-19 22:48
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli
+---
 
 News of Swift 3.0 [not having ABI compatibility](http://thread.gmane.org/gmane.comp.lang.swift.evolution/17276) in the upcoming release is *rampant* throughout the [Twitter](https://twitter.com/sandofsky/status/732246903530758144) and [blog](http://ericasadun.com/2016/05/17/more-about-the-swift-abi-postponement-the-laws-of-abi-changes/) spheres. I personally feel like the impact of not having ABI compatibility is much less severe than perceived, for a few reasons we'll consider here.
 

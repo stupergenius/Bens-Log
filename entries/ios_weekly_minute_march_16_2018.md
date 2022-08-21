@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - March 16, 2018
-Date: 2018-03-16 19:28
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - March 16, 2018
+date: 2018-03-16 19:28
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 Lately, I've been running a little iOS centric get-together for a group of iOS developers, and for anyone else that might have a passing interest in iOS and mobile development in general. We typically discuss the goings on of the iOS, Apple, and mobile ecosystems, and then watch a video (usually a recorded conference video) and discuss how it applies to our work and our projects.
 

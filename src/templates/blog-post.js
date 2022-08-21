@@ -26,8 +26,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <div className="page-content" itemProp="articleBody"
             dangerouslySetInnerHTML={{ __html: post.html }} />
 
-          <hr/>
-
           <PostNavigation next={next} previous={previous} />
         </article>
         <Bio />

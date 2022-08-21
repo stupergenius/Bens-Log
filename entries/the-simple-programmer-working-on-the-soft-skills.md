@@ -1,10 +1,12 @@
-Title: The Simple Programmer: Working on the Soft Skills
-Date: 2015-11-21 14:50
-Author: Ben Snider
-Category: Tech
-Tags: development, blogging
+---
+title: "The Simple Programmer: Working on the Soft Skills"
+date: 2015-11-21 14:50
+author: Ben Snider
+category: Tech
+tags: development, blogging
+---
 
-In my continual quest for knoweldge, I don't always consume purely technical literature. I also like to read those books that teach us how to interact with people. As I continue down my career path, it's becoming more and more clear to me that the so-called "soft skills" are vital skills that *everyone* needs: developers included. We developers tend to think that the best solution will always bubble up to the top, or that the smartest and/or most knowledgable person will get promoted, but that is not always the case. What happens more often than not, is that the person that is able to most clearly, persuasively, and confidently communicate his or her ideas is the person that will be the most successful. This is true in any avenue in life, so I see reading these books and applying their teachings to my life to not only be a boost to my career, but also in my personal life.
+In my continual quest for knowledge, I don't always consume purely technical literature. I also like to read those books that teach us how to interact with people. As I continue down my career path, it's becoming more and more clear to me that the so-called "soft skills" are vital skills that *everyone* needs: developers included. We developers tend to think that the best solution will always bubble up to the top, or that the smartest and/or most knowledgeable person will get promoted, but that is not always the case. What happens more often than not, is that the person that is able to most clearly, persuasively, and confidently communicate his or her ideas is the person that will be the most successful. This is true in any avenue in life, so I see reading these books and applying their teachings to my life to not only be a boost to my career, but also in my personal life.
 
 To that end I started reading the excellent [Soft Skills](https://www.manning.com/books/soft-skills) book by John Sonmez. This book teaches valuable life lessons in general, but it also has some very good advice for people specifically in the software profession. The book includes some advice on marketing yourself, and heavily recommends setting up a blog and *consistently* updating it. I agreed with this suggestion and blogging is something I have done in the past and greatly enjoyed, so I decided to reboot my blog.
 

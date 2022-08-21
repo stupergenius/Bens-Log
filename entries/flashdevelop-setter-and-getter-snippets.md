@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2009-02-09 19:02'
+date: 2009-02-09 19:02
 tags: 'Actionscript, FlashDevelop, Flash'
 title: FlashDevelop Setter and Getter Snippets
 ---
@@ -20,13 +20,13 @@ be on the same line(anywhere on the line) of a variable definition. You
 can then use the same Control-B combo to get the snippet box, and select
 the appropriate snippet. The actual snippets follow. set:
 
-``` {.sourceCode .actionscript}
+```actionscript
 $(Boundary)$(CSLB)public function set $(EntryPoint)(value:$(MbrTypName)):void { $(MbrName) = value; }$(Boundary)
 ```
 
 get:
 
-``` {.sourceCode .actionscript}
+```actionscript
 $(Boundary)$(CSLB)public function get $(EntryPoint)():$(MbrTypName) { return $(MbrName); }$(Boundary)
 ```
 
@@ -34,7 +34,7 @@ With these snippets you can make setters and getters quickly and
 accurately. The actual code they generate will end up looking something
 like the following:
 
-``` {.sourceCode .actionscript}
+```actionscript
 private var _points:uint = 0;
 public function get points():uint { return _points; }
 public function set points(value:uint):void { _points = value; }

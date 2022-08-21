@@ -33,7 +33,7 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit: 10, sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         id
         excerpt

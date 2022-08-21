@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-02-09 18:03'
+date: 2010-02-09 18:03
 tags: 'Game Dev, Linux, Shell Scripting'
 title: ImageMagick Split and Join a Sprite Sheet
 ---
@@ -23,7 +23,7 @@ they don't exceed the width limit for Flash
 [BitmapData](http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/display/BitmapData.html)
 objects. So here we simply are cropping the image into square tiles.
 
-``` {.sourceCode .bash}
+```bash
 convert full.png -crop 32x32 tiles.png
 ```
 
@@ -39,7 +39,7 @@ globbed format will result in tiles that should be at the end of the
 image randomly at the beginning (try it before this step by noting the
 output of \`ls tiles\*.png\`).
 
-``` {.sourceCode .bash}
+```bash
 files=$(ls tiles*.png | sort -t '-' -n -k 2 | tr '\n' ' ')
 montage $files -tile x1 -geometry 32x32+0+0 sheet.png
 ```

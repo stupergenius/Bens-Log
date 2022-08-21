@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - April 13, 2018
-Date: 2018-04-13 19:00
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - April 13, 2018
+date: 2018-04-13 19:00
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 ## Big Announcements
 

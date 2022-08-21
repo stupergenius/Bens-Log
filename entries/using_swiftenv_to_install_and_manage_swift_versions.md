@@ -1,8 +1,10 @@
-Title: Using swiftenv To Install and Manage Swift Versions
-Date: 2016-03-09 19:26
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli
+---
+title: Using swiftenv To Install and Manage Swift Versions
+date: 2016-03-09 19:26
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli
+---
 
 With the proliferation of Swift snapshot builds, and Apple's relatively high release cadence, managing Swift versions has come to be a bit of a pain. This is especially felt on Linux since Swift doesn't just get bundled with each Xcode release. Linux users must go out and manually download a snapshot, unzip it, add it your path, etc.
 

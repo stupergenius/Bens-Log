@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-06-17 20:40'
+date: 2008-06-17 20:40
 tags: CakePHP
 title: Using Radio Buttons with CakePHP
 ---
@@ -13,7 +13,7 @@ array, the keys are the values sent back to the controller, and the
 values are the text displayed on the page. Building the controller to
 output a list of radio buttons looks like this:
 
-``` {.sourceCode .php}
+```php
 ...
 function radioPosts() {
     if (empty($this->data)) {
@@ -32,7 +32,7 @@ function radioPosts() {
 
 Then the view for this controller would look something like:
 
-``` {.sourceCode .php}
+```php
 echo $form->create('Post', array('action'=>'radioPosts'));
 echo $form->radio('id', $options);
 echo $form->end('Submit!');

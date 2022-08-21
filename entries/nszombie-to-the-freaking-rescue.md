@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-05-05 11:21'
+date: 2010-05-05 11:21
 tags: 'iOS, iPad, iPhone, Objective-C'
 title: NSZombie to the Freaking Rescue
 ---
@@ -15,7 +15,7 @@ and HOLY CRAP WHY ISN'T THIS DEFAULT BEHAVIOR. After enabling the
 argument I found where my app crashed in about 1 minute. Turns out you
 **should not** do:
 
-``` {.sourceCode .objc}
+```objc
 - (void)viewDidUnload {
     self.foo = nil;
     [super viewDidUnload];
@@ -24,7 +24,7 @@ argument I found where my app crashed in about 1 minute. Turns out you
 
 but rather
 
-``` {.sourceCode .objc}
+```objc
 - (void)viewDidUnload {
     foo = nil;
     [super viewDidUnload];

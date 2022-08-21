@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2007-06-21 19:49'
+date: 2007-06-21 19:49
 tags: 'google, gadgets'
 title: 'LocalWineEvents.com Google Gadget'
 ---

@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2011-10-29 16:14'
+date: 2011-10-29 16:14
 tags: 'code, Open Source'
 title: Code Camp Columbus 2011
 ---

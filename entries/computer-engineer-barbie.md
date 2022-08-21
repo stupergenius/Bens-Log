@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2010-01-13 17:10'
+date: 2010-01-13 17:10
 tags: 'Barbie, Funny'
 title: Computer Engineer Barbie
 ---

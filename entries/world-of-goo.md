@@ -1,6 +1,6 @@
 ---
 category: Fun
-date: '2008-10-29 17:18'
+date: 2008-10-29 17:18
 tags: games
 title: World of Goo
 ---

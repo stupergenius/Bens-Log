@@ -1,8 +1,10 @@
-Title: Using Swift To Make Command Line Scripts - Part 1
-Date: 2015-11-04 20:01
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli
+---
+title: Using Swift To Make Command Line Scripts - Part 1
+date: 2015-11-04 20:01
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli
+---
 
 Since we have [no open source Swift yet](//www.bensnider.com/no-open-source-swift-yet.html) to play with, I figure we have some time familiarize ourselves with what we currently have in Swift as distributed on OS X with Xcode. To that end, I think a good use of our time is learning to use Swift as a scripting language that can be used to write simple (ish) command line tools.
 

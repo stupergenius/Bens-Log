@@ -1,8 +1,10 @@
-Title: Swift 4 Blog Project Updates
-Date: 2017-08-06 13:33
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,development,cli
+---
+title: Swift 4 Blog Project Updates
+date: 2017-08-06 13:33
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,development,cli
+---
 
 Hark! The time is upon us for the great Swift 4 migration. Woe are the developers still using Swift 3. So say we all!
 
@@ -126,7 +128,7 @@ Overall it feels like very little has changed. I don't actually think there was 
 
 I also had a few straggling Swift 2.x projects that required a 2.x to 3.x migration, which was not trivial. Oops! 🤷‍♂️ But once the 3.x migration was complete, the 3.x to 4.0 didn't require any changes.
 
-The package manager changes are actually quite nice. Now that I understand the new v4 specification, I like the way the configuration is very explicit. It does reduce some of the "magic" of the v3 specification, but for a package manifest that's designed to fully specify a software package, I like the reduced magicalness. 
+The package manager changes are actually quite nice. Now that I understand the new v4 specification, I like the way the configuration is very explicit. It does reduce some of the "magic" of the v3 specification, but for a package manifest that's designed to fully specify a software package, I like the reduced magicalness.
 
 The Xcode migrator did a good job this time around, likely because it didn't really have much to do. As [this pull request](https://github.com/DenverSwiftHeads/SubstringHashSwift/pull/3) shows, it's mainly build settings that get updated and changed around.
 

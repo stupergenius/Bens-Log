@@ -1,8 +1,10 @@
-Title: Wrapping C Code Within a Single Swift Package
-Date: 2016-11-26 17:14
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli, c, swift package manager
+---
+title: Wrapping C Code Within a Single Swift Package
+date: 2016-11-26 17:14
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli, c, swift package manager
+---
 
 Working with C code from Swift always seemed to me to be one of those [dark arts](https://www.pottermore.com/collection-episodic/harry-potters-villains-by-jkr) that us *well to do* developers shouldn't need to dabble in. However, it's actually a fairly simple proposition, and the Swift compiler and Swift Package Manager lend a big helping hand when importing C code into Swift packages. The C language excels at certain tasks, and as such is a very good tool in the Swift programmer's toolbelt. Indeed, C is not something we should shy away from on the basis that it seems too complicated to integrate, and instead we can rely on the efforts of the Swift toolchain to help.
 

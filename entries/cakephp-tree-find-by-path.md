@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-07-24 13:11'
+date: 2008-07-24 13:11
 tags: CakePHP
 title: CakePHP Tree Find By Path
 ---
@@ -12,7 +12,7 @@ find by the category name since its not unique, but we can search by
 pathing like tvs/color or movies/color. So to this end is this model
 code:
 
-``` {.sourceCode .php}
+```php
 function findPath($paths, $fieldName) {
     $root = $this->find('threaded');
     return $this->findPathHelper($root, $paths, $fieldName);
@@ -41,7 +41,7 @@ function findPathHelper($node, $paths, $fieldName) {
 
 And we can use it from our controller like:
 
-``` {.sourceCode .php}
+```php
 $category = $this->Category->findPath(array('tv', 'color'), 'name');
 ```
 

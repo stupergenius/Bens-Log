@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-01-11 18:21'
+date: 2010-01-11 18:21
 tags: 'As3, Flash, Flex, Image, Scaling'
 title: Flex Scale Image to Max Dimension
 ---
@@ -12,7 +12,7 @@ of the bounds, is scaled so that its largest dimension becomes equal to
 the given maximum. This function scales the image proportionally so it
 won't skew it.
 
-``` {.sourceCode .actionscript}
+```actionscript
 public function scaleImageToMaxDimension(img:Image, maxWidth:Number, maxHeight:Number):void {
     var scaleH:Number=1, scaleV:Number=1;
     if (img.content.height > maxHeight) {
@@ -33,7 +33,7 @@ approach works best when you have little or no control over either. In
 application this code would be used after the image has finished
 loading. So for example I might do something like the following:
 
-``` {.sourceCode .actionscript}
+```actionscript
 import flash.events.Event;
 import mx.controls.Image;
 

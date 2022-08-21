@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-03-01 21:23'
+date: 2010-03-01 21:23
 tags: 'CakePHP, Portfolio'
 title: Lice Helper Launched
 ---

@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - March 30, 2018
-Date: 2018-03-30 18:40
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - March 30, 2018
+date: 2018-03-30 18:40
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 Back on track this week with some small refinements. Enjoy!
 

@@ -1,8 +1,10 @@
-Title: Using Swift To Make Command Line Scripts - Part 2
-Date: 2015-11-17 16:11
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli
+---
+title: Using Swift To Make Command Line Scripts - Part 2
+date: 2015-11-17 16:11
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli
+---
 
 Welcome back! In [part one](http://www.bensnider.com/using-swift-to-make-command-line-scripts-part-1.html) of this two part series, we got started using Swift along with [OptionKit](https://github.com/nomothetis/OptionKit) to build simple command line script. In this second and final part, we'll pull all the pieces of the puzzle together and use the foundation we've built along with some classes from Apple's Foundation to implement our BTC command line price checker.
 
@@ -37,14 +39,14 @@ func intervalFromArgs(args: Array<String>) -> String? {
     let intervalOpt = Option(trigger:.Mixed("i", "interval"), numberOfParameters: 1)
     let helpOpt = Option(trigger:.Mixed("h", "help"))
     let parser = OptionParser(definitions:[intervalOpt, helpOpt])
-    
+
     func printHelp(parser: OptionParser) {
         print(parser.helpStringForCommandName("btc.swift"))
     }
-    
+
     do {
         let (options, _) = try parser.parse(args)
-    
+
         if options[helpOpt] != nil {
             printHelp(parser)
         } else {
@@ -62,7 +64,7 @@ func intervalFromArgs(args: Array<String>) -> String? {
     } catch {
         print("Unspecified error parsing arguments")
     }
-    
+
     return nil
 }
 
@@ -229,7 +231,7 @@ $ ./btc.swift --interval hourly
 334.05
 ```
 
-Using the above commands, we're actually running the program as a script: Swift is compiling it on the fly and executing it for us. What if we wanted to compile the `btc.swift` down to an exectuable and run it directly? 
+Using the above commands, we're actually running the program as a script: Swift is compiling it on the fly and executing it for us. What if we wanted to compile the `btc.swift` down to an exectuable and run it directly?
 
 As it turns out, after doing some research, I don't *think* its possible to dynmically link a 3rd party framework using `swiftc`. I can get the `btc.swift` script to compile, but it fails trying to reference the `OptionKit` framework when actually running it. I suspect that removing the `OptionKit` dependency would allow us to compile the script successfully, however. If anyone has any pointers on getting this to work, it would be much appreciated!
 

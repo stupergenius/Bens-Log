@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2011-09-11 21:23'
+date: 2011-09-11 21:23
 tags: 'OLF2011, Linux, Open Source'
 title: Keynote Speech at OLF 2011
 ---

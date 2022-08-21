@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2011-09-11 21:01'
+date: 2011-09-11 21:01
 tags: 'OLF2011, Linux, Open Source'
 title: Ohio LinuxFest 2011 Series
 ---

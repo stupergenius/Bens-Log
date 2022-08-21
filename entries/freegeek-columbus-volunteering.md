@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2011-09-13 21:46'
+date: 2011-09-13 21:46
 tags: 'linux, volunteering, hardware'
 title: FreeGeek Columbus Volunteering
 ---

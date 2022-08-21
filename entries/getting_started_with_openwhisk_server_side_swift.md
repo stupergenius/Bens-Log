@@ -1,8 +1,10 @@
-Title: Getting Started with OpenWhisk Server Side Swift
-Date: 2016-03-26 14:15
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli
+---
+title: Getting Started with OpenWhisk Server Side Swift
+date: 2016-03-26 14:15
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli
+---
 
 With the burgeoning server side Swift movement picking up steam, some larger players have started incorporating Swift into their cloud offerings. One such player is IBM, who has long been in the cloud business but is often not top of mind when it comes to cloud offerings, at least in the iOS development community where [AWS](https://aws.amazon.com) is king. [IBM](http://www.ibm.com), however, has quite a few cloud products through their [Bluemix platform](http://www.ibm.com/cloud-computing/bluemix/), which actually includes their [Watson cloud services](http://www.ibm.com/cloud-computing/bluemix/watson/) and the always useful [Swift Sandbox](https://swiftlang.ng.bluemix.net/#/repl).
 
@@ -264,7 +266,7 @@ Wanted: Swift developer with 5 years experience.
 
 Neat huh?
 
-The first thing you'll notice when invoking OpenWhisk actions currently is performance. It takes a good *6 seconds* to invoke our simple action. Let's address that passive aggressively by adding a new joke and updating the action: 
+The first thing you'll notice when invoking OpenWhisk actions currently is performance. It takes a good *6 seconds* to invoke our simple action. Let's address that passive aggressively by adding a new joke and updating the action:
 
 ```bash
 $ wsk action update joke joke.swift

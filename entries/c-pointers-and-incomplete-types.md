@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-02-24 20:57'
+date: 2008-02-24 20:57
 tags: C++
 title: C++ Pointers and Incomplete Types
 ---
@@ -9,7 +9,7 @@ Learned some new things about C++ and pointers today. Namely that you
 can declare a pointer member variable of the class A in class A. Pretty
 neat. Take for example the following simple illustration.
 
-``` {.sourceCode .cpp}
+```cpp
 #include <iostream>
 class A {
     public:
@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
 
 It's output is as follows:
 
-``` {.sourceCode .cpp}
+```cpp
 a.member->x = '3'
 b.member->x = '2'
 ```

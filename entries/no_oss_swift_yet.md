@@ -1,8 +1,10 @@
-Title: No Open Source Swift Yet
-Date: 2015-11-04 19:35
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development
+---
+title: No Open Source Swift Yet
+date: 2015-11-04 19:35
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development
+---
 
 Well, it's now November, 2015 and no word *quite* yet on the availability of an open source Swift offering from Apple. However, Chris Lattner has been [spotted in the wild](https://www.reddit.com/r/swift/comments/3kbjjn/so_swift_isnt_open_source_yet_then/cuwwub2?) saying Apple's still on target to deliver by the end of 2015. Given Apple's track record of secrecy about the Swift language itself, I doubt we'll hear anything between now and the time it's actually released. Thinking back to when Swift was initially announced, there was complete radio silence until the moment Swift was revealed to the public, and I suspect Apple will do the same thing here.
 

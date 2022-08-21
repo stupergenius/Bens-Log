@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2010-04-27 22:20'
+date: 2010-04-27 22:20
 tags: 'Actionscript, Flash, Game Dev, Exile, Games'
 title: 'Don''t Get Shot Released'
 ---

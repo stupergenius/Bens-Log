@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2011-09-08 02:08'
+date: 2011-09-08 02:08
 tags: 'Python, Hosting, Linux'
 title: 'It''s Alive!'
 ---

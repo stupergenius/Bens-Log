@@ -1,6 +1,6 @@
 ---
 category: Tech
-date: '2008-09-02 16:40'
+date: 2008-09-02 16:40
 tags: 'Firefox, Chrome, Javascript'
 title: Google Chrome and Firefox 3 Benchmark Comparisons
 ---

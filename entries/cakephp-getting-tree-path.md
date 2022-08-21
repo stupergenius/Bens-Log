@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-07-25 12:06'
+date: 2008-07-25 12:06
 tags: CakePHP
 title: CakePHP Getting Tree Path
 ---
@@ -9,7 +9,7 @@ In a reversal of yesterday's post is today's, getting a path to a node,
 or nodes. Basically we just use the core getpath() function of the Tree
 behavior and traverse that path.
 
-``` {.sourceCode .php}
+```php
 function setTreePath(&$data, $path='tree_path', $label='name') {
     if (!is_array($data) || !in_array('Tree', $this->actsAs)) {
         return $data;
@@ -35,7 +35,7 @@ function _setTreePath(&$data, $pathField, $label) {
 
 And we can use it simply like in the following test:
 
-``` {.sourceCode .php}
+```php
 function testSetTreePath() {
     $result = $this->Category->findById(3);
     $this->Category->setTreePath($result, 'tree_id');

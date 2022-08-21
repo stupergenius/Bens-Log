@@ -1,8 +1,10 @@
-Title: Making a Slack Slash Command Integration using Swift on Heroku
-Date: 2015-12-16 21:38
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, heroku, github
+---
+title: Making a Slack Slash Command Integration using Swift on Heroku
+date: 2015-12-16 21:38
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, heroku, github
+---
 
 A lot has changed in the open source Swift world in the past few weeks! The community has already provided some great coverage on the announcement, so I'll just get to the good stuff!
 

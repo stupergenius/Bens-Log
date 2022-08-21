@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2011-09-11 21:55'
+date: 2011-09-11 21:55
 tags: 'pelican, s3'
 title: 's3cmd, Pelican, and You'
 ---
@@ -10,7 +10,7 @@ using [s3cmd](http://s3tools.org/s3cmd) is ridiculously simple. All I
 have to do to sync the Pelican generated directory to my S3 bucket is
 the follwing:
 
-``` {.sourceCode .bash}
+```bash
 s3cmd sync --acl-public --delete-removed output/ s3://www.bensnider.com/
 ```
 

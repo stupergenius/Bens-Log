@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2011-09-11 20:55'
+date: 2011-09-11 20:55
 tags: 'python, pelican'
 title: Simple Pelican Blog Post Template Generator
 ---
@@ -11,7 +11,7 @@ blog posts by printing out some reStructuredText, in the format Pelican
 expects, based on the given input parameters. You can use it simple as
 in the following listing:
 
-``` {.sourceCode .bash}
+```bash
 ./tools/pelican-template-generator.py "My New Post"
 ```
 
@@ -22,7 +22,7 @@ attempting to get the current author's name from the environment,
 generating dates, and support for categories and tags. The command I
 used to generate this post's template was:
 
-``` {.sourceCode .bash}
+```bash
 ./pelican-template-generator.py "Simple Pelican Blog Post Template Generator" --category Development --tags "python, pelican" -f simple-pelican-blog-post-template-generator.rst
 ```
 

@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2008-08-07 20:31'
+date: 2008-08-07 20:31
 tags: 'C++, OpenMP'
 title: OpenMP Examples
 ---
@@ -27,7 +27,7 @@ is useful, for example, if the current layer 200 neurons, then the
 overhead associated with creating more threads might actually degrade
 performance.
 
-``` {.sourceCode .cpp}
+```cpp
 int j(0); double neuronValue(0);
 #pragma omp parallel for private(j, neuronValue) if(layer.numNeurons > 500)
 for (int i=0; i<layer.numNeurons; ++i) {
@@ -41,14 +41,14 @@ for (int i=0; i<layer.numNeurons; ++i) {
 Likewise we can use these two declarations independently as in the
 following two examples with expected results.
 
-``` {.sourceCode .cpp}
+```cpp
 #pragma parallel for if(x > 100)
 for (int i=0; i<1000; ++i) {
     // something
 }
 ```
 
-``` {.sourceCode .cpp}
+```cpp
 int j(0);
 #pragma parallel for private(j)
 for (int i=0; i<1000; ++i) {

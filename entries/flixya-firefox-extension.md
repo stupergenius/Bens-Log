@@ -1,6 +1,6 @@
 ---
 category: Development
-date: '2007-06-28 23:12'
+date: 2007-06-28 23:12
 tags: 'Firefox, XML, Javascript, XPath, Scraping'
 title: Flixya Firefox Extension
 ---
