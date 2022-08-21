@@ -21,6 +21,7 @@
     "gatsby-plugin-image": "^2.20.0",
     "gatsby-plugin-layout": "^3.20.0",
     "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-sass": "^5.20.0",
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-plugin-sitemap": "^5.20.0",

@@ -4,9 +4,11 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, actions  }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
   const tagTemplate = path.resolve('./src/templates/tag.js')
+
+  createRedirects(createRedirect)
 
   return graphql(`
     query AllPosts {
@@ -75,6 +77,14 @@ exports.onCreateNode = ({ node, actions , getNode }) => {
       value: url,
     })
   }
+}
+
+function createRedirects(createRedirect) {
+  createRedirect({
+    fromPath: '/abi-compatibility-whoopdty-do-what-does-it-all-mean.html',
+    toPath: '/posts/abi-compatibility-whoopdty-do-what-does-it-all-mean/',
+    isPermanent: true
+  })
 }
 
 function createPostPages(createPage, template, posts) {
