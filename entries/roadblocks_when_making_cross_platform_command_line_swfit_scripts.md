@@ -1,8 +1,10 @@
-Title: Roadblocks When Making Cross Platform Command Line Swift Scripts
-Date: 2016-1-17 11:35
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift, development, cli, linux
+---
+title: Roadblocks When Making Cross Platform Command Line Swift Scripts
+date: 2016-01-17 11:35
+author: Ben Snider
+category: Open Source Swift
+tags: swift, development, cli, linux
+---
 
 I set out with the intention of updating the [Using Swift To Make Command Line Scripts](http://www.bensnider.com/using-swift-to-make-command-line-scripts-part-1.html) post so that the script would run using the open source version of Swift 2.2 on both Linux and OS X. However, I encountered some roadblocks along the way, and in hopes that someone else can avoid them I'll detail my experiences here.
 

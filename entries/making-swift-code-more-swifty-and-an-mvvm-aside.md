@@ -1,8 +1,10 @@
-Title: Making Swift Code More Swifty And An MVVM Aside
-Date: 2016-05-17 21:02
-Author: Ben Snider
-Category: iOS Development 
-Tags: swift, development, iOS, denver swift heads
+---
+title: Making Swift Code More Swifty And An MVVM Aside
+date: 2016-05-17 21:02
+author: Ben Snider
+category: iOS Development
+tags: swift, development, iOS, denver swift heads
+---
 
 At [May's Denver Swift Heads meetup](http://www.meetup.com/Denver-Swift-Heads/events/230471435/), [Vui Nguyen](https://sunfishempire.wordpress.com) gave a great presentation on completing an interview algorithm puzzle. Her intro to the talk is paraphrased better than I can:
 
@@ -27,7 +29,7 @@ func reverseHash(hashie:Int64, wordLength:Int) -> String
 {
     let letters:String = "acdegilmnoprstuw"
     let thirtySeven:Int64 = 37
-    
+
     var remainders = [Int64]()
     remainders.insert(hashie, atIndex: 0)
     var remainder = hashie
@@ -41,11 +43,11 @@ func reverseHash(hashie:Int64, wordLength:Int) -> String
     var letterIndex = 0
     for i in 0..<wordLength {
         letterIndex = remainders[i] - (remainders[i+1] * 37)
-        
+
         let lettersStringIndex = letters.startIndex.advancedBy(letterIndex);
         resultString.append(letters[lettersStringIndex])
     }
-    
+
     reversedString = String(resultString.characters.reverse())
     return reversedString
 }
@@ -108,7 +110,7 @@ var resultString:String = ""
 var letterIndex = 0
 for i in 0..<wordLength {
     letterIndex = remainders[i] - (remainders[i+1] * 37)
-    
+
     let lettersStringIndex = letters.startIndex.advancedBy(letterIndex);
     resultString.append(letters[lettersStringIndex])
 }
@@ -121,7 +123,7 @@ return reversedString
 for i in (0..<wordLength).reverse() {
     let letterIndex = remainders[i] - (remainders[i+1] * 37)
     let lettersStringIndex = letters.startIndex.advancedBy(Int(letterIndex));
-    
+
     resultString.append(letters[lettersStringIndex])
 }
 

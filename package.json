@@ -1,0 +1,44 @@
+{
+  "name": "bens-log",
+  "version": "1.0.0",
+  "private": true,
+  "description": "bens-log",
+  "author": "Benjamin Snider",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "gatsby": "^4.20.0",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
+    "gatsby-plugin-feed": "^4.21.0",
+    "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-layout": "^3.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-sass": "^5.20.0",
+    "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-plugin-sitemap": "^5.20.0",
+    "gatsby-remark-prismjs": "^6.21.0",
+    "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-transformer-remark": "^5.20.0",
+    "gatsby-transformer-sharp": "^4.20.0",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.28.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.54.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-plugin-react": "^7.30.1",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,8 +1,10 @@
-Title: Refactoring an MVVM App To Swift 3
-Date: 2016-11-13 13:45
-Author: Ben Snider
-Category: iOS Development 
-Tags: swift, development, iOS
+---
+title: Refactoring an MVVM App To Swift 3
+date: 2016-11-13 13:45
+author: Ben Snider
+category: iOS Development
+tags: swift, development, iOS
+---
 
 [Previously](http://www.bensnider.com/making-swift-code-more-swifty-and-an-mvvm-aside.html), as an exercise in converting an existing app to use a [MVVM style architecture](https://en.wikipedia.org/wiki/Model–view–viewmodel), and to make the code more Swifty, I refactored [an example](https://github.com/DenverSwiftHeads/SubstringHashSwift) app provided by [Vui Nguyen](https://sunfishempire.wordpress.com/). This time, we'll explore what it takes to refactor this app to Swift 3, while also taking a look at separating out our view model layer even more. We'll also investigate how to make this code more idiomatic Swift 3 and even a little light [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).
 
@@ -208,7 +210,7 @@ public enum ReverseHashResult {
     case noResult(String)
     case error(String)
     case success(String)
-    
+
     var color: UIColor {
         get {
             switch self {
@@ -241,7 +243,7 @@ First, we'll gather up all the view model's public methods into a single protoco
 protocol ReverseHashViewModelProtocol {
     /** Called to notify the view model that the hash number updated. */
     func hashNumberUpdated(_ hashNumber: String?)
-    
+
     // ... etc.
 }
 ```
@@ -296,7 +298,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // but we'll just take the default.
             hashController.viewModel = ReverseHashViewModel()
         }
-        
+
         return true
     }
 }

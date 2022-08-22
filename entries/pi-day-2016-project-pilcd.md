@@ -1,8 +1,10 @@
-Title: Pi Day 2016 Project - PiLCD
-Date: 2016-03-13 20:58
-Author: Ben Snider
-Category: arduino, hardware, technology
-Tags: arduino, hardware, technology
+---
+title: Pi Day 2016 Project - PiLCD
+date: 2016-03-13 20:58
+author: Ben Snider
+category: arduino, hardware, technology
+tags: arduino, hardware, technology
+---
 
 Every year [Pi Day](http://www.piday.org) rolls around and I always have the intention of creating some interesting Arduino (really hoping that gets easier to spell) project but I get sidetracked for whatever reason. The last time I actually succeeded in this was in 2012! I decided to use that project - [the PiSeg Arduino project](http://www.bensnider.com/piseg-arduino-project.html) - as a basis for this year. I figured I would be more successful adopting a previous project than starting a whole new one.
 

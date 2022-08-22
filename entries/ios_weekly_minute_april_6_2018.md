@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - April 6, 2018
-Date: 2018-04-06 18:48
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - April 6, 2018
+date: 2018-04-06 18:48
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 ## Big Announcements
 
@@ -47,7 +49,7 @@ struct Address: Equatable {
   let street: String
   let city: String
   ...
-  
+
   static func ==(lhs: Address, rhs: Address) -> Bool {
     return lhs.street == rhs.street &&
       ...
