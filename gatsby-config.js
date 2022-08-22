@@ -111,6 +111,6 @@ module.exports = {
       ],
     },
   }, {
-      resolve: `gatsby-plugin-meta-redirect`,
+      resolve: `gatsby-plugin-client-side-redirect`,
   }]
 };
