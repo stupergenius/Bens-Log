@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - May 19, 2018
-Date: 2018-05-19
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - May 19, 2018
+date: 2018-05-19
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 ## Big Announcements
 
@@ -30,7 +32,7 @@ Yet another excellent [case study](https://medium.com/@Pinterest_Engineering/sup
 
 The Netflix engineering team wrote this week about how their teams [design, build, test, deploy, support, and operate](https://medium.com/netflix-techblog/full-cycle-developers-at-netflix-a08c31f83249) features. This is a very powerful idea if put into place and supported at all levels of the organization, including building and staffing an internal "tools" team. The most poignant piece in the article makes the point better than I could:
 
-> "Operate what you build" puts the devops principles in action by having the team that develops a system also be responsible for operating and supporting that system. Distributing this responsibility to each development team, rather than externalizing it, creates direct feedback loops and aligns incentives. 
+> "Operate what you build" puts the devops principles in action by having the team that develops a system also be responsible for operating and supporting that system. Distributing this responsibility to each development team, rather than externalizing it, creates direct feedback loops and aligns incentives.
 
 ## Swift Tip: Design Patterns in Swift: State Pattern
 

@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - May 6, 2018
-Date: 2018-05-06
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - May 6, 2018
+date: 2018-05-06
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 ## Big Announcements
 
@@ -39,7 +41,7 @@ struct ConfigPlist: Codable {
     	public let baseURL: URL
     	public let apiKey: String
     }
-    
+
     public let config: Config
 }
 

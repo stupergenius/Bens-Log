@@ -1,8 +1,10 @@
-Title: iOS Weekly Minute - May 12, 2018
-Date: 2018-05-12
-Author: Ben Snider
-Category: Open Source Swift
-Tags: swift,linux,iOS
+---
+title: iOS Weekly Minute - May 12, 2018
+date: 2018-05-12
+author: Ben Snider
+category: Open Source Swift
+tags: swift,linux,iOS
+---
 
 ## Big Announcements
 
@@ -40,7 +42,7 @@ let viewModel = Container.resolve(MyViewModel.Self)!
 guard let viewModel = Container.resolve(MyViewModel.Self) else {
 	fatalError("Yeah... gonna need a view model here, mmk, thanks.")
 }
-...	
+...
 ```
 
 In the above, we declare that we require the view model to resolve to continue execution. However, in the "bad" version we're not really declaring why we 1) need this thing and 2) how or if we can guarantee that the view model will always resolve. This gets a little better in the "better" version, but it's all too easy to slip in the former "bad" version. It's also quite verbose and having this pattern repeat can lead to a littering of `guard let` expressions everywhere.
