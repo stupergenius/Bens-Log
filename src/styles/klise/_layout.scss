@@ -17,7 +17,11 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 
-  a#mode {
+  button#mode {
+    background: none;
+    // background-color: transparent;
+    border: none;
+    padding: 0;
     float: left;
     left: 8px;
     top: 6px;
@@ -115,7 +119,7 @@
     background-color: $white;
     border-bottom: 1px solid $light;
 
-    a#mode {
+    button#mode {
       left: 10px;
       top: 12px;
     }

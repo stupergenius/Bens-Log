@@ -18,7 +18,7 @@ const DarkLightToggle = () => {
   }
 
   return (
-    <a onClick={toggleDarkLight} id="mode">
+    <button onClick={toggleDarkLight} id="mode">
       <svg
         className="mode-sunny"
         xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ const DarkLightToggle = () => {
           }}
         />
       </svg>
-    </a>
+    </button>
   )
 }
 
