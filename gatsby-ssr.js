@@ -1,5 +1,9 @@
 const React = require("react")
 
+const htmlAttrs = {
+  lang: 'en-US',
+}
+
 const bodyAttrs = {
   className: 'notransition',
   'data-theme': 'dark',
@@ -12,7 +16,12 @@ const fontSpecs = [
 ]
 
 const linkStyles = fontSpecs.map(spec =>
-  <link key={spec} rel="stylesheet" href={`https://fonts.googleapis.com/css2?${spec}&display=swap`} />
+  <link
+    key={spec}
+    rel="stylesheet"
+    href={`https://fonts.googleapis.com/css2?${spec}&display=swap`}
+    media="print"
+    onLoad={`this.media='all'`} />
 )
 
 const darkLighScript = (
@@ -42,7 +51,8 @@ const darkLighScript = (
 
 const headCmps = [...linkStyles, darkLighScript]
 
-exports.onRenderBody = ({ setBodyAttributes, setHeadComponents }) => {
+exports.onRenderBody = ({ setBodyAttributes, setHeadComponents, setHtmlAttributes }) => {
+  setHtmlAttributes(htmlAttrs)
   setBodyAttributes(bodyAttrs)
   setHeadComponents(headCmps)
 }

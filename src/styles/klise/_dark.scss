@@ -124,7 +124,7 @@ body[data-theme="dark"] {
   .navbar {
     border-color: $dark-light;
     .menu {
-      a#mode {
+      button#mode {
         .mode-sunny {
           display: block;
         }
